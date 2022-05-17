@@ -56,6 +56,11 @@ const Home = () => {
         <SocialMediaLinks />
         <div style={{ ...handleMediaScreen(innerWidth) }}>
           <Headings />
+          <div className={styles.ScrollDown_Wrapper}>
+            <span className={styles.ScrollDown_Icon}>
+              <i className="bi bi-mouse-fill"></i>
+            </span>
+          </div>
           <PersonalIMG />
         </div>
       </section>
