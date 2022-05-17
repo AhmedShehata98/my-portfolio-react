@@ -11,7 +11,9 @@
   padding-top: 15px;
   padding-bottom: 15px;
   @include endPoint(sm) {
-    margin-top: 20px;
+    margin-top: 1.5rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 }
 .first-line,

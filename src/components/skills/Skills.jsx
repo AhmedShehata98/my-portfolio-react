@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import { siteDataCtx } from "../../contexts/dataContentContext";
 import styles from "../../scss/pages/skills/skills.module.css";
 import Container from "../layout/Container";
-import Overlay from "../layout/Overlay";
 import ContentBox from "./ContentBox";
 import SectionHeader from "../layout/SectionHeader";
 

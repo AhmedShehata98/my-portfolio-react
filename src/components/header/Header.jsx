@@ -1,4 +1,4 @@
-import React, { useEffect, useState, memo } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../../scss/pages/header/header.module.css";
 
 // import component
@@ -16,7 +16,6 @@ const Header = () => {
     window.addEventListener("scroll", () => setHeaderActive(window.scrollY));
   });
 
-  console.log(headerActive);
   return (
     <header
       className={

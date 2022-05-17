@@ -1,5 +1,4 @@
-import React, { useContext, useEffect } from "react";
-import { colorsMode } from "../../contexts/NightMode";
+import React from "react";
 import style from "../../scss/pages/header/logo/logo.module.css";
 import logo from "../../assets/images/OURATE.png";
 import logo_2 from "../../assets/images/OURAT_2.png";

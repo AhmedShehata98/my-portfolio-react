@@ -6,7 +6,6 @@ import Col from "../layout/Col";
 import PersonalImgAbout from "./PersonalImgAbout";
 import Container from "../layout/Container";
 import DetailsBox from "./DetailsBox";
-import Overlay from "../layout/Overlay";
 
 const About = () => {
   const {

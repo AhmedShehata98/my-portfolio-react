@@ -1,7 +1,5 @@
 import React, { createContext, useReducer } from "react";
 import NightModeReducer from "../reducers/NightModeReducer";
-import logoLightMode from "../assets/images/OURATE.png";
-import logoNightMode from "../assets/images/OURAT_2.png";
 
 export const colorsMode = createContext();
 colorsMode.displayName = "ThemeData";

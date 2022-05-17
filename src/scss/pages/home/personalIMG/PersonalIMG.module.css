@@ -7,9 +7,9 @@
 /* colors */
 /**********/
 :root {
-  --root-primary-color: #3a9874;
+  --root-primary-color: #00bf76;
   --root-second-color: #041417;
-  --root-overlay-color: #01010e;
+  --root-overlay-color: #17201c;
   --root-white-color: #f6f6f6;
   --root-boxes-bgColor: #00bf76;
   --root-boxes-bdColor: #15201c;
@@ -31,7 +31,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 320px;
+  width: 500px;
   height: calc(100vh - (200px));
   -webkit-clip-path: polygon(50% 6%, 88% 25%, 88% 63%, 49% 81%, 11% 62%, 10% 25%);
   clip-path: polygon(50% 6%, 88% 25%, 88% 63%, 49% 81%, 11% 62%, 10% 25%);

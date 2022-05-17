@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import styles from "../../scss/pages/contacts/Form/form.module.css";
 import { siteDataCtx } from "../../contexts/dataContentContext";
 import Col from "../layout/Col";
@@ -42,7 +42,7 @@ function Form() {
       <Row>
         <Col col_count="12">
           <textarea
-            className={styles["messageArea"] + " " + "form-control"}
+            className={`${styles["messageArea"]} form-control`}
             // type="text"
             placeholder={fourthField + "..."}
           ></textarea>

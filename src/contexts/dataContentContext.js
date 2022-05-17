@@ -115,6 +115,8 @@ const siteData = {
             "https://raw.githubusercontent.com/AhmedShehata98/My-portflio/master/assets/images/gallery/toStudy.webp",
           name: "to study list [LocalStorage]",
           discription: "created with technology : [html -css- javascript ]",
+          sourceLink: "https://github.com/AhmedShehata98/To-Study-List",
+          demoLink: "https://ahmedshehata98.github.io/To-Study-List/",
         },
         {
           projectIMG:
@@ -123,6 +125,8 @@ const siteData = {
           name: "weather app",
           discription:
             "created with technology : [html - css - api- javascript ]",
+          sourceLink: "https://github.com/AhmedShehata98/Weather_App",
+          demoLink: "https://ahmedshehata98.github.io/Weather_App/",
         },
         {
           projectIMG:
@@ -130,6 +134,9 @@ const siteData = {
 
           name: "e-commerce product page",
           discription: "created with technology : [html - css - javascript ]",
+          sourceLink:
+            "https://github.com/AhmedShehata98/ecommerce-product-page",
+          demoLink: "https://ahmedshehata98.github.io/ecommerce-product-page/",
         },
         {
           projectIMG:
@@ -138,6 +145,10 @@ const siteData = {
           name: "iventory system management [api]",
           discription:
             "created with technology : [html - css - api - javascript ]",
+          sourceLink:
+            "https://github.com/AhmedShehata98/Inventory-management-system",
+          demoLink:
+            "https://ahmedshehata98.github.io/Inventory-management-system/",
         },
         {
           projectIMG:
@@ -145,6 +156,10 @@ const siteData = {
 
           name: "landing page",
           discription: "created with technology : [html - css ]",
+          sourceLink:
+            "https://github.com/AhmedShehata98/sunnyside-agency-landing-page",
+          demoLink:
+            "https://ahmedshehata98.github.io/sunnyside-agency-landing-page/",
         },
         {
           projectIMG:
@@ -152,6 +167,8 @@ const siteData = {
 
           name: "Music player app",
           discription: "created with technology : [html - css - javascript ]",
+          sourceLink: "https://github.com/AhmedShehata98/Music-Player-app",
+          demoLink: "https://ahmedshehata98.github.io/Music-Player-app/",
         },
       ],
       buttons: {
@@ -181,8 +198,8 @@ const siteData = {
       contactsBoxes: {
         email: "ahmedshehataq98@gmail.com",
         phonesNumbers: ["01096019665", "01559021655"],
-        linkedIN: "/ahmed-shehata-b63001225",
-        facebook: "https://www.facebook.com/MidoEsquire",
+        linkedIN: "linkedin/ahmed-shehata-b63001225",
+        facebook: "facebook.com/MidoEsquire",
         address: "Egypt , Alexandria - st - Elhadara Elgededa ",
       },
     },

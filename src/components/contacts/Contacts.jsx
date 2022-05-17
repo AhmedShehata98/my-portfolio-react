@@ -3,7 +3,7 @@ import { siteDataCtx } from "../../contexts/dataContentContext";
 import styles from "../../scss/pages/contacts/contacts/contacts.module.css";
 import Container from "../layout/Container";
 import SectionHeader from "../layout/SectionHeader";
-import Content_Wrapper from "../layout/Content_Wrapper";
+import ContentWrapper from "../layout/ContentWrapper";
 import Row from "../layout/Row";
 import Col from "../layout/Col";
 import Form from "../contacts/Form";
@@ -20,7 +20,7 @@ function Contacts() {
     <div className={styles.contacts} id="Contacts">
       <Container>
         <SectionHeader iconName={iconName} title={title} subTitle={subTitle} />
-        <Content_Wrapper>
+        <ContentWrapper>
           <Row>
             <Col class_list="col-12 col-md-6">
               <Form />
@@ -29,7 +29,7 @@ function Contacts() {
               <ContactsBoxes />
             </Col>
           </Row>
-        </Content_Wrapper>
+        </ContentWrapper>
       </Container>
     </div>
   );

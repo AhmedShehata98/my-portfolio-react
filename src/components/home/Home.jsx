@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useContext } from "react";
-import { colorsMode } from "../../contexts/NightMode";
+import React, { useState, useEffect } from "react";
+
 // import styles
 import styles from "../../scss/pages/home/home.module.css";
 // import Componentes
@@ -7,13 +7,10 @@ import Headings from "./Headings";
 import SocialMediaLinks from "./SocialMediaLinks";
 import PersonalIMG from "./PersonalIMG";
 import backgroundIMG_lg from "../../assets/images/backgrond.jpg";
-import backgroundIMG_sm from "../../assets/images/backgrond.jpg";
+import backgroundIMG_sm from "../../assets/images/backgrond_mobile.jpg";
 
 const Home = () => {
   const [innerWidth, setInnerWidth] = useState(window.innerWidth);
-  const {
-    mode: { id },
-  } = useContext(colorsMode);
 
   useEffect(() => {
     window.addEventListener("resize", () => {
@@ -21,7 +18,6 @@ const Home = () => {
     });
   }, [innerWidth]);
 
-  // startTranslation(ParticlesBg);
   const handleMediaScreen = (innerWidth) => {
     let mediaScreenStyles = {};
     if (innerWidth >= 992) {

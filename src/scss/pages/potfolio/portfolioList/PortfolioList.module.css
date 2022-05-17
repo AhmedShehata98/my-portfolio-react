@@ -1,0 +1,152 @@
+/**********/
+/* fonts */
+/**********/
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap");
+/**********/
+/* colors */
+/**********/
+:root {
+  --root-primary-color: #00bf76;
+  --root-second-color: #041417;
+  --root-overlay-color: #17201c;
+  --root-white-color: #f6f6f6;
+  --root-boxes-bgColor: #00bf76;
+  --root-boxes-bdColor: #15201c;
+  --root-progress-foreground: #f8f8f8;
+  --root-progress-backround: #6a6a6aab;
+  --root-projects-backround: #fca311d3;
+  --root-projects-text: #03045e;
+  --root-font-color: #eeffee;
+}
+
+.stylesList_wrapper {
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(320px, max-content))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(320px, -webkit-max-content));
+      grid-template-columns: repeat(auto-fit, minmax(320px, max-content));
+  place-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 0;
+  row-gap: 25px;
+  -webkit-column-gap: 8px;
+          column-gap: 8px;
+}
+
+.projectBox {
+  border-radius: 0.2rem;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--root-font-color);
+  background-color: var(--root-primary-color);
+}
+
+.projectBox > img {
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-filter: sepia(0%);
+          filter: sepia(0%);
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.08, 0.21, 0.2, 1.07);
+  transition: -webkit-transform 0.5s cubic-bezier(0.08, 0.21, 0.2, 1.07);
+  transition: transform 0.5s cubic-bezier(0.08, 0.21, 0.2, 1.07);
+  transition: transform 0.5s cubic-bezier(0.08, 0.21, 0.2, 1.07), -webkit-transform 0.5s cubic-bezier(0.08, 0.21, 0.2, 1.07);
+}
+
+.projectBox:hover > :nth-child(2) {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+
+.projectBox:hover > img {
+  -webkit-transform: rotate(8deg) scale(1.2);
+          transform: rotate(8deg) scale(1.2);
+  -webkit-filter: sepia(100%);
+          filter: sepia(100%);
+}
+
+.DescriptionWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--root-boxes-bdColor);
+  -webkit-transform: translateY(150%);
+          transform: translateY(150%);
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.08, 0.21, 0.2, 1.07);
+  transition: -webkit-transform 0.5s cubic-bezier(0.08, 0.21, 0.2, 1.07);
+  transition: transform 0.5s cubic-bezier(0.08, 0.21, 0.2, 1.07);
+  transition: transform 0.5s cubic-bezier(0.08, 0.21, 0.2, 1.07), -webkit-transform 0.5s cubic-bezier(0.08, 0.21, 0.2, 1.07);
+}
+
+.projectDescription {
+  text-align: center;
+  color: #def8f8;
+}
+
+.projectName {
+  font-size: 1.2rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+  background: linear-gradient(40deg, var(--root-projects-backround), var(--root-boxes-bgColor));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #def8f8;
+}
+
+.projectSubName {
+  max-width: 300px;
+  font-weight: 600;
+  text-transform: capitalize;
+  text-align: start;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.7;
+}
+
+.links {
+  position: relative;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 100%;
+  height: 50px;
+  padding: 1rem 0;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(75%, var(--root-primary-color)), color-stop(25%, #3333333e));
+  background: linear-gradient(0deg, var(--root-primary-color) 75%, #3333333e 25%);
+}
+
+.links > a {
+  font-size: 1.5rem;
+  color: var(--root-font-color);
+}
+/*# sourceMappingURL=PortfolioList.module.css.map */

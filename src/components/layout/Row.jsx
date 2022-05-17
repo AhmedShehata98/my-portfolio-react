@@ -5,8 +5,6 @@ const Row = ({ children, class_list }) => {
   let _class = "row";
   if (class_list !== undefined) {
     _class = _class + " " + class_list;
-  } else {
-    _class = _class;
   }
 
   return (

@@ -1,13 +1,14 @@
 import React from "react";
 import styles from "../../scss/pages/header/TogglerButton/togglerButton.module.css";
-function TogglerButton({
+const TogglerButton = ({
   headerActive,
-  navLinkVisibility = { navLinkVisibility },
+  navLinkVisibility,
   setNavLinkVisibility,
-}) {
-  const handleNavbartoogler = () => {
+}) => {
+  // toggle handling function
+  function handleNavbartoogler() {
     setNavLinkVisibility(!navLinkVisibility);
-  };
+  }
 
   return (
     <div>
@@ -26,6 +27,6 @@ function TogglerButton({
       </button>
     </div>
   );
-}
+};
 
 export default TogglerButton;

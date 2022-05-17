@@ -2,7 +2,7 @@
 /* Preset body */
 /***************/
 body {
-  transition: background-color 0.5s ease-out;
+  transition: background-color 0.7s cubic-bezier(0.65, 0.21, 0.65, 1.24);
   background-color: $overlay-color;
   font-family: "Nunito", sans-serif;
 }

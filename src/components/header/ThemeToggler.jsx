@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import "../../scss/pages/header/modeToggler/modeToggler.css";
 
@@ -15,7 +15,7 @@ function ThemeToggler({ themeButton, setThemeButton, headerActive }) {
 
     const secondaryHex = "#D8D8D8";
     const fontHex = "#111";
-    const overlayColor = "#f6f6f6";
+    const overlayColor = "#b1cdc2";
 
     document.documentElement.style.setProperty(
       varSecondaryClrProp,
@@ -50,7 +50,7 @@ function ThemeToggler({ themeButton, setThemeButton, headerActive }) {
 
     const secondaryHex = "#041417";
     const fontHex = "#eeffee";
-    const overlayColor = "#01010e";
+    const overlayColor = "#17201c";
 
     document.documentElement.style.setProperty(
       varSecondaryClrProp,
@@ -91,10 +91,10 @@ function ThemeToggler({ themeButton, setThemeButton, headerActive }) {
 
   let ThemeButton_Wrapper = "themeBotton-Wrapper";
   if (themeButton && headerActive >= 90) {
-    ThemeButton_Wrapper = "themeBotton-Wrapper" + " " + "scroll_themeMode";
+    ThemeButton_Wrapper = "themeBotton-Wrapper scroll_themeMode";
   }
   if (themeButton && headerActive < 90) {
-    ThemeButton_Wrapper = "themeBotton-Wrapper" + " " + "on";
+    ThemeButton_Wrapper = "themeBotton-Wrapper on";
   }
 
   return (
@@ -110,6 +110,7 @@ function ThemeToggler({ themeButton, setThemeButton, headerActive }) {
           name="theme Button"
           checked={themeButton}
           id="themeButton"
+          onChange={handleToggle}
         />
 
         <span className="modeIndicator">

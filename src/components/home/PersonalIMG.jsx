@@ -6,7 +6,7 @@ const PersonalIMG = () => {
   return (
     <div className={styles["img-wrapper"]}>
       <div className={styles["main-img"]}>
-        <img src={personalIMGSrc} />
+        <img src={personalIMGSrc} alt="my-personal-img" />
       </div>
     </div>
   );

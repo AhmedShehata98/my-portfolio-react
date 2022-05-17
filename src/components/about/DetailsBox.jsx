@@ -1,4 +1,4 @@
-import React, { Fragment, useContext } from "react";
+import React, { useContext } from "react";
 import { siteDataCtx } from "../../contexts/dataContentContext";
 import SkillsButton from "./SkillsButton";
 import styles from "../../scss/pages/about/detailsBox/detalisBox.module.css";
