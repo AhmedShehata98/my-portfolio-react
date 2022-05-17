@@ -1,0 +1,8 @@
+@import "../../../utilites/variables";
+@import "../../../utilites/mixins";
+
+.portfolio {
+  position: relative;
+  min-height: fit-content;
+  border-bottom: 2px solid $primary-color;
+}

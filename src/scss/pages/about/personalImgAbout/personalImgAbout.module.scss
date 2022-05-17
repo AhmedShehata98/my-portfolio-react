@@ -1,0 +1,27 @@
+@import "../../../utilites/variables";
+@import "../../../utilites/mixins";
+
+.personalImg-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: (90%);
+  background-color: $primary-color;
+  margin: auto;
+
+  &:hover > img {
+    transform: rotate(0deg);
+    filter: none;
+  }
+
+  > img {
+    max-width: 70%;
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid $white-color;
+    box-shadow: 0 0 10px 0 $font-color;
+    transition: transform 0.2s ease-out, filter 0.5s ease-out;
+    transform: rotate(-5deg);
+    filter: contrast(80%) brightness(70%);
+  }
+}

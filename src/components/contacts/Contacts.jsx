@@ -1,0 +1,38 @@
+import React, { useContext } from "react";
+import { siteDataCtx } from "../../contexts/dataContentContext";
+import styles from "../../scss/pages/contacts/contacts/contacts.module.css";
+import Container from "../layout/Container";
+import SectionHeader from "../layout/SectionHeader";
+import Content_Wrapper from "../layout/Content_Wrapper";
+import Row from "../layout/Row";
+import Col from "../layout/Col";
+import Form from "../contacts/Form";
+import ContactsBoxes from "../contacts/ContactsBoxes";
+
+function Contacts() {
+  const {
+    contacts: {
+      header: { iconName, title, subTitle },
+    },
+  } = useContext(siteDataCtx);
+
+  return (
+    <div className={styles.contacts} id="Contacts">
+      <Container>
+        <SectionHeader iconName={iconName} title={title} subTitle={subTitle} />
+        <Content_Wrapper>
+          <Row>
+            <Col class_list="col-12 col-md-6">
+              <Form />
+            </Col>
+            <Col class_list="col-12 col-md-5">
+              <ContactsBoxes />
+            </Col>
+          </Row>
+        </Content_Wrapper>
+      </Container>
+    </div>
+  );
+}
+
+export default Contacts;

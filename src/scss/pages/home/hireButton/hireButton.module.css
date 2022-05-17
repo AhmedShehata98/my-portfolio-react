@@ -1,0 +1,54 @@
+/**********/
+/* fonts */
+/**********/
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap");
+/**********/
+/* colors */
+/**********/
+:root {
+  --root-primary-color: #3a9874;
+  --root-second-color: #041417;
+  --root-overlay-color: #01010e;
+  --root-white-color: #f6f6f6;
+  --root-boxes-bgColor: #00bf76;
+  --root-boxes-bdColor: #15201c;
+  --root-progress-foreground: #f8f8f8;
+  --root-progress-backround: #6a6a6aab;
+  --root-projects-backround: #fca311d3;
+  --root-projects-text: #03045e;
+  --root-font-color: #eeffee;
+}
+
+.hire-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: var(--root-primary-color);
+  width: 165px;
+  height: 45px;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--root-font-color);
+  border: 1px solid var(--root-second-color);
+}
+
+.hire-button:hover {
+  background-color: var(--root-second-color);
+  color: var(--root-font-color);
+}
+
+@media (max-width: 768px) {
+  .hire-button {
+    width: calc(100% - 45px);
+  }
+}
+/*# sourceMappingURL=hireButton.module.css.map */

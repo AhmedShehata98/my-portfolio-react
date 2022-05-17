@@ -1,0 +1,93 @@
+/**********/
+/* fonts */
+/**********/
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap");
+/**********/
+/* colors */
+/**********/
+:root {
+  --root-primary-color: #3a9874;
+  --root-second-color: #041417;
+  --root-overlay-color: #01010e;
+  --root-white-color: #f6f6f6;
+  --root-boxes-bgColor: #00bf76;
+  --root-boxes-bdColor: #15201c;
+  --root-progress-foreground: #f8f8f8;
+  --root-progress-backround: #6a6a6aab;
+  --root-projects-backround: #fca311d3;
+  --root-projects-text: #03045e;
+  --root-font-color: #eeffee;
+}
+
+.social-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: calc(95vh - 70px);
+  width: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .social-media {
+    margin-top: 20px;
+  }
+}
+
+.first-line,
+.last-line {
+  display: inline-block;
+  background-color: var(--root-primary-color);
+  width: 4px;
+  height: calc(100% / 2);
+}
+
+.social-media-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.gitub,
+.facebook,
+.linkedIn {
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.gitub > *,
+.facebook > *,
+.linkedIn > * {
+  color: var(--root-font-color);
+  -webkit-transition: color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.gitub > *:hover,
+.facebook > *:hover,
+.linkedIn > *:hover {
+  color: var(--root-primary-color);
+}
+/*# sourceMappingURL=socialMediaLinks.module.css.map */

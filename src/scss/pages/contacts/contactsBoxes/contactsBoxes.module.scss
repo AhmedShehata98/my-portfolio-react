@@ -1,0 +1,38 @@
+@import "../../../utilites/variables";
+@import "../../../utilites/mixins";
+
+.contacts-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 8px;
+  padding: 0;
+  margin-top: 1rem;
+  width: 100%;
+  flex-grow: 1;
+}
+.box-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0.4rem 1rem;
+  background-color: $boxes-bgColor;
+  border: 3px solid $boxes-bdColor;
+  list-style: none;
+  width: 100%;
+  flex-grow: 1;
+  gap: 1rem;
+}
+.icon {
+  > :first-child {
+    color: $font-color;
+    font-size: 1.5rem;
+  }
+}
+.name {
+  color: $boxes-bdColor;
+  text-transform: capitalize;
+  font-weight: 700;
+  margin-bottom: 0;
+}

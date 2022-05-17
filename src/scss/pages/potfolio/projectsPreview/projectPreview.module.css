@@ -1,0 +1,102 @@
+/**********/
+/* fonts */
+/**********/
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap");
+/**********/
+/* colors */
+/**********/
+:root {
+  --root-primary-color: #3a9874;
+  --root-second-color: #041417;
+  --root-overlay-color: #01010e;
+  --root-white-color: #f6f6f6;
+  --root-boxes-bgColor: #00bf76;
+  --root-boxes-bdColor: #15201c;
+  --root-progress-foreground: #f8f8f8;
+  --root-progress-backround: #6a6a6aab;
+  --root-projects-backround: #fca311d3;
+  --root-projects-text: #03045e;
+  --root-font-color: #eeffee;
+}
+
+.previewParent {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.slider:hover > :last-child {
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
+}
+
+.information {
+  background-color: var(--root-projects-backround);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: -webkit-transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  -webkit-transform: translateY(-155%) translateX(-50%);
+          transform: translateY(-155%) translateX(-50%);
+}
+
+.projectName {
+  position: relative;
+  color: var(--root-projects-text);
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.projectName::after {
+  content: "";
+  position: absolute;
+  bottom: 55px;
+  left: 40%;
+  -webkit-transform: translateX(-40%);
+          transform: translateX(-40%);
+  background-color: var(--root-boxes-bdColor);
+  width: 40px;
+  height: 40px;
+  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+          clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.projectName::before {
+  content: "";
+  position: absolute;
+  bottom: 55px;
+  left: 60%;
+  -webkit-transform: translateX(-40%);
+          transform: translateX(-40%);
+  background-color: var(--root-boxes-bdColor);
+  width: 40px;
+  height: 40px;
+  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+          clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+/*# sourceMappingURL=projectPreview.module.css.map */

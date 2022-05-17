@@ -1,0 +1,45 @@
+@import "../../../utilites/variables";
+@import "../../../utilites/mixins";
+
+.social-media {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: calc(95vh - 70px);
+  width: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  @include endPoint(sm) {
+    margin-top: 20px;
+  }
+}
+.first-line,
+.last-line {
+  display: inline-block;
+  background-color: $primary-color;
+  width: 4px;
+  height: calc(100% / 2);
+}
+
+.social-media-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.gitub,
+.facebook,
+.linkedIn {
+  font-size: 1.5rem;
+  text-decoration: none;
+  > * {
+    color: $font-color;
+    transition: color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+@import "../../../utilites/variables";
+@import "../../../utilites/mixins";
+
+.previewParent {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.slider {
+  &:hover {
+    > :last-child {
+      transform: translateY(-50%) translateX(-50%);
+    }
+  }
+}
+.information {
+  background-color: $projects-backround;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  transform: translateY(-155%) translateX(-50%);
+}
+
+.projectName {
+  position: relative;
+  color: $projects-text;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 55px;
+    left: 40%;
+    transform: translateX(-40%);
+    background-color: $boxes-bdColor;
+    width: 40px;
+    height: 40px;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 55px;
+    left: 60%;
+    transform: translateX(-40%);
+    background-color: $boxes-bdColor;
+    width: 40px;
+    height: 40px;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  }
+}

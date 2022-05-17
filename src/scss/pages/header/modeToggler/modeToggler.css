@@ -1,0 +1,83 @@
+/**********/
+/* fonts */
+/**********/
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap");
+/**********/
+/* colors */
+/**********/
+:root {
+  --root-primary-color: #3a9874;
+  --root-second-color: #041417;
+  --root-overlay-color: #01010e;
+  --root-white-color: #f6f6f6;
+  --root-boxes-bgColor: #00bf76;
+  --root-boxes-bdColor: #15201c;
+  --root-progress-foreground: #f8f8f8;
+  --root-progress-backround: #6a6a6aab;
+  --root-projects-backround: #fca311d3;
+  --root-projects-text: #03045e;
+  --root-font-color: #eeffee;
+}
+
+.buttonBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50px;
+  height: 100%;
+}
+
+.themeBotton-Wrapper {
+  position: relative;
+  width: 50px;
+  height: 22px;
+  background-color: var(--root-overlay-color);
+  border-radius: 50px;
+  border: 2px solid #dededd;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s ease-out;
+  transition: background-color 0.3s ease-out;
+}
+
+.themeBotton-Wrapper.on {
+  background-color: var(--root-primary-color);
+}
+
+.theme-Button {
+  visibility: hidden;
+}
+
+.theme-Button:checked + span {
+  -webkit-transform: translateY(-50%) translateX(140%);
+          transform: translateY(-50%) translateX(140%);
+}
+
+.modeIndicator {
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-box-shadow: 0 0 0 20px 0 #111;
+          box-shadow: 0 0 0 20px 0 #111;
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.72, -0.01, 0.43, 0.99);
+  transition: -webkit-transform 0.5s cubic-bezier(0.72, -0.01, 0.43, 0.99);
+  transition: transform 0.5s cubic-bezier(0.72, -0.01, 0.43, 0.99);
+  transition: transform 0.5s cubic-bezier(0.72, -0.01, 0.43, 0.99), -webkit-transform 0.5s cubic-bezier(0.72, -0.01, 0.43, 0.99);
+}
+
+.scroll_themeMode {
+  background-color: var(--root-font-color) !important;
+}
+/*# sourceMappingURL=modeToggler.css.map */

@@ -1,0 +1,113 @@
+/**********/
+/* fonts */
+/**********/
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap");
+/**********/
+/* colors */
+/**********/
+:root {
+  --root-primary-color: #3a9874;
+  --root-second-color: #041417;
+  --root-overlay-color: #01010e;
+  --root-white-color: #f6f6f6;
+  --root-boxes-bgColor: #00bf76;
+  --root-boxes-bdColor: #15201c;
+  --root-progress-foreground: #f8f8f8;
+  --root-progress-backround: #6a6a6aab;
+  --root-projects-backround: #fca311d3;
+  --root-projects-text: #03045e;
+  --root-font-color: #eeffee;
+}
+
+.headingBox {
+  position: relative;
+  z-index: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid var(--root-white-color);
+  padding: 1rem;
+  background-color: var(--root-boxes-bgColor);
+  margin-top: 2rem;
+  border: 2px solid var(--root-boxes-bdColor);
+}
+
+.headingTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+  background-color: var(--root-boxes-bdColor);
+  width: 20%;
+}
+
+@media (max-width: 768px) {
+  .headingTitle {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+.headingTitle > :last-child {
+  color: var(--root-boxes-bgColor);
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  line-height: 2.2;
+}
+
+@media (max-width: 768px) {
+  .headingTitle > :last-child {
+    font-size: 1rem;
+    line-height: 3;
+  }
+}
+
+.icon > :first-child {
+  color: var(--root-boxes-bgColor);
+  font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+  .icon {
+    font-size: 1.5rem;
+    line-height: 2;
+  }
+}
+
+.headingSubTitle {
+  color: var(--root-boxes-bdColor);
+  font-size: 1.2rem;
+  max-width: 600px;
+  text-transform: capitalize;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+@media (max-width: 768px) {
+  .headingSubTitle {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+}
+/*# sourceMappingURL=sectionHeader.module.css.map */

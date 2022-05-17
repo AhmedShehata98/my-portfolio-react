@@ -1,0 +1,66 @@
+@import "../../utilites/variables";
+@import "../../utilites/mixins";
+
+.headingBox {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid $white-color;
+  padding: 1rem;
+  background-color: $boxes-bgColor;
+  margin-top: 2rem;
+  border: 2px solid $boxes-bdColor;
+}
+.headingTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  background-color: $boxes-bdColor;
+  width: 20%;
+
+  @include endPoint(sm) {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  > :last-child {
+    color: $boxes-bgColor;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    line-height: 2.2;
+
+    @include endPoint(sm) {
+      font-size: 1rem;
+      line-height: 3;
+    }
+  }
+}
+.icon {
+  > :first-child {
+    color: $boxes-bgColor;
+    font-size: 2rem;
+  }
+  @include endPoint(sm) {
+    font-size: 1.5rem;
+    line-height: 2;
+  }
+}
+.headingSubTitle {
+  color: $boxes-bdColor;
+  font-size: 1.2rem;
+  max-width: 600px;
+  text-transform: capitalize;
+  font-weight: 600;
+  line-height: 1.1;
+
+  @include endPoint(sm) {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+}

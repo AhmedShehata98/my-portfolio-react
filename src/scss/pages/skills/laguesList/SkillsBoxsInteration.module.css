@@ -1,0 +1,122 @@
+/**********/
+/* fonts */
+/**********/
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap");
+/**********/
+/* colors */
+/**********/
+:root {
+  --root-primary-color: #3a9874;
+  --root-second-color: #041417;
+  --root-overlay-color: #01010e;
+  --root-white-color: #f6f6f6;
+  --root-boxes-bgColor: #00bf76;
+  --root-boxes-bdColor: #15201c;
+  --root-progress-foreground: #f8f8f8;
+  --root-progress-backround: #6a6a6aab;
+  --root-projects-backround: #fca311d3;
+  --root-projects-text: #03045e;
+  --root-font-color: #eeffee;
+}
+
+.langList {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(260px, max-content))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(260px, -webkit-max-content));
+      grid-template-columns: repeat(auto-fit, minmax(260px, max-content));
+  padding-left: 0;
+  gap: 15px;
+}
+
+@media (max-width: 768px) {
+  .langList {
+    -ms-grid-columns: (minmax(260px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+}
+
+.LanguageBox {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 0.6rem 1.3rem;
+  border: 0.5px solid var(--root-boxes-bgColor);
+  list-style: none;
+  background-color: var(--root-boxes-bdColor);
+  overflow-y: hidden;
+}
+
+.LanguageBox:hover .nameOverlay {
+  top: 0;
+}
+
+.count {
+  color: var(--root-boxes-bgColor);
+  font-size: 1.3rem;
+  font-weight: bold;
+  line-height: 1.3;
+  margin-bottom: 0;
+}
+
+.icon {
+  max-width: 11%;
+  margin-top: 0.3rem;
+  margin-left: 0.75rem;
+}
+
+.nameOverlay {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 2;
+  top: 100%;
+  left: 0;
+  background-color: rgba(4, 18, 4, 0.777);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  width: 100%;
+  height: 100%;
+  -webkit-transition: top ease-out 0.3s;
+  transition: top ease-out 0.3s;
+}
+
+.LanguageName {
+  color: var(--root-primary-color);
+  text-transform: uppercase;
+  font-weight: normal;
+  margin-bottom: 0;
+  margin-left: 0.75rem;
+}
+
+.skillProgress {
+  position: relative;
+  margin-left: 0.75rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 8px;
+  background-color: var(--root-progress-backround);
+  overflow: hidden;
+}
+
+.skillProgress > span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--root-progress-foreground);
+  height: 8px;
+}
+/*# sourceMappingURL=skillsBoxsInteration.module.css.map */

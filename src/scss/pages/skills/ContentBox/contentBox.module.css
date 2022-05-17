@@ -1,0 +1,117 @@
+/**********/
+/* fonts */
+/**********/
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap");
+/**********/
+/* colors */
+/**********/
+:root {
+  --root-primary-color: #3a9874;
+  --root-second-color: #041417;
+  --root-overlay-color: #01010e;
+  --root-white-color: #f6f6f6;
+  --root-boxes-bgColor: #00bf76;
+  --root-boxes-bdColor: #15201c;
+  --root-progress-foreground: #f8f8f8;
+  --root-progress-backround: #6a6a6aab;
+  --root-projects-backround: #fca311d3;
+  --root-projects-text: #03045e;
+  --root-font-color: #eeffee;
+}
+
+.ContentBoxWraper {
+  position: relative;
+  z-index: 4;
+  margin: 2.5rem 0;
+}
+
+.topic_title_Container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.topic_title_Container:hover .line1::after {
+  left: 100%;
+}
+
+.topic_title_Container:hover .line2::after {
+  left: 0%;
+}
+
+.line1,
+.line2 {
+  position: relative;
+  width: calc(20%);
+  height: 1px;
+  background-color: var(--root-font-color);
+}
+
+.line1::after,
+.line2::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%) rotate(90deg);
+          transform: translateY(-50%) rotate(90deg);
+  background-color: var(--root-primary-color);
+  width: 20px;
+  height: 20px;
+  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+          clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  -webkit-transition: left 0.5s ease-out;
+  transition: left 0.5s ease-out;
+}
+
+@media (max-width: 768px) {
+  .line1,
+  .line2 {
+    width: calc(15%);
+  }
+}
+
+.heading_text {
+  background-color: var(--root-boxes-bgColor);
+  width: 25%;
+  padding: 0.5rem;
+  border: 1px solid var(--root-primary-color);
+}
+
+.heading_text > h6 {
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 0;
+  color: var(--root-boxes-bdColor);
+}
+
+@media (max-width: 768px) {
+  .heading_text {
+    width: calc(60%);
+  }
+}
+
+.line2 {
+  width: calc(50%);
+}
+
+@media (max-width: 768px) {
+  .line2 {
+    width: calc(15%);
+  }
+}
+
+.line2:after {
+  left: 100%;
+}
+/*# sourceMappingURL=contentBox.module.css.map */

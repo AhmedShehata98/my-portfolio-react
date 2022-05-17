@@ -1,0 +1,116 @@
+/**********/
+/* fonts */
+/**********/
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap");
+/**********/
+/* colors */
+/**********/
+:root {
+  --root-primary-color: #3a9874;
+  --root-second-color: #041417;
+  --root-overlay-color: #01010e;
+  --root-white-color: #f6f6f6;
+  --root-boxes-bgColor: #00bf76;
+  --root-boxes-bdColor: #15201c;
+  --root-progress-foreground: #f8f8f8;
+  --root-progress-backround: #6a6a6aab;
+  --root-projects-backround: #fca311d3;
+  --root-projects-text: #03045e;
+  --root-font-color: #eeffee;
+}
+
+.details-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .details-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.title {
+  font-size: 1.5rem;
+  border: 1px solid var(--root-boxes-bdColor);
+  width: 60%;
+  text-align: center;
+  padding: 5px 10px;
+  background-color: var(--root-boxes-bdColor);
+  color: var(--root-boxes-bgColor);
+}
+
+@media (max-width: 768px) {
+  .title {
+    width: 100%;
+    margin-top: 2.5rem;
+  }
+}
+
+.subtitle {
+  text-transform: capitalize;
+  font-size: 1.3rem;
+  color: var(--root-font-color);
+  font-weight: 700;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .subtitle {
+    margin-top: 1rem;
+  }
+}
+
+.SkillsButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40%;
+  height: 35px;
+  text-transform: capitalize;
+  font-size: 1.3rem;
+  background-color: var(--root-boxes-bgColor);
+  color: var(--root-boxes-bdColor);
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  border: 1px solid var(--root-boxes-bdColor);
+}
+
+.SkillsButton:hover {
+  background-color: var(--root-boxes-bdColor);
+  color: var(--root-boxes-bgColor);
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .SkillsButton {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=detalisBox.module.css.map */

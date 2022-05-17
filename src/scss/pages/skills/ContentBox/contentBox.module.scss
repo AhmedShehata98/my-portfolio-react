@@ -1,0 +1,80 @@
+@import "../../../utilites/variables";
+@import "../../../utilites/mixins";
+
+.ContentBoxWraper {
+  position: relative;
+  z-index: 4;
+  margin: 2.5rem 0;
+}
+.topic_title_Container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  &:hover {
+    .line1::after {
+      left: 100%;
+    }
+    .line2::after {
+      left: 0%;
+    }
+  }
+}
+
+.line1,
+.line2 {
+  position: relative;
+  width: calc(20%);
+  height: 1px;
+  background-color: $font-color;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%) rotate(90deg);
+    background-color: $primary-color;
+    width: 20px;
+    height: 20px;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    transition: left 0.5s ease-out;
+  }
+
+  @include endPoint(sm) {
+    width: calc(15%);
+  }
+}
+
+.heading_text {
+  background-color: $boxes-bgColor;
+  width: 25%;
+  padding: 0.5rem;
+  border: 1px solid $primary-color;
+
+  > h6 {
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 0;
+    color: $boxes-bdColor;
+  }
+
+  @include endPoint(sm) {
+    width: calc(60%);
+  }
+}
+.headingTools {
+}
+.line2 {
+  width: calc(50%);
+  @include endPoint(sm) {
+    width: calc(15%);
+  }
+
+  &:after {
+    left: 100%;
+  }
+}

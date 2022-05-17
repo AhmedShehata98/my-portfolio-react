@@ -1,0 +1,102 @@
+/**********/
+/* fonts */
+/**********/
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap");
+/**********/
+/* colors */
+/**********/
+:root {
+  --root-primary-color: #3a9874;
+  --root-second-color: #041417;
+  --root-overlay-color: #01010e;
+  --root-white-color: #f6f6f6;
+  --root-boxes-bgColor: #00bf76;
+  --root-boxes-bdColor: #15201c;
+  --root-progress-foreground: #f8f8f8;
+  --root-progress-backround: #6a6a6aab;
+  --root-projects-backround: #fca311d3;
+  --root-projects-text: #03045e;
+  --root-font-color: #eeffee;
+}
+
+.about {
+  position: relative;
+  z-index: 5;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 2px solid var(--root-primary-color);
+  border-top: 2px solid var(--root-primary-color);
+}
+
+.about::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  background: url("../../../assets/images/blob.svg") no-repeat right;
+}
+
+.about::before {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  inset: 0;
+  -webkit-clip-path: circle(12.9% at 11% 75%);
+          clip-path: circle(12.9% at 11% 75%);
+  opacity: 0.5;
+}
+
+.border {
+  position: relative;
+  z-index: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 85vh;
+  padding: 3rem;
+  border: 3px solid var(--root-primary-color);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.name {
+  border: 2px solid var(--root-boxes-bdColor);
+  padding: 5px 10px;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  background-color: var(--root-boxes-bgColor);
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 1.3rem;
+  color: var(--root-boxes-bdColor);
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .name {
+    width: 90%;
+    margin-top: 2rem;
+  }
+}
+/*# sourceMappingURL=about.module.css.map */

@@ -1,0 +1,10 @@
+@import "../../../utilites/variables";
+@import "../../../utilites/mixins";
+
+.contacts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 100vh;
+}

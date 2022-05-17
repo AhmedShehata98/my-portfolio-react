@@ -1,0 +1,12 @@
+@import "../../utilites/variables";
+@import "../../utilites/mixins";
+
+.skills {
+  position: relative;
+  z-index: 6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 70px);
+  border-bottom: 2px solid $primary-color;
+}

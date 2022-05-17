@@ -1,0 +1,91 @@
+@import "../../../utilites/variables";
+@import "../../../utilites/mixins";
+.navigation-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  align-items: center;
+  flex: 1;
+
+  @include endPoint(sm) {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    left: 0;
+    flex-direction: column;
+    background-color: $primary-color;
+    transform: translateY(-10%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-out, transform 0.3s ease-out;
+    > :first-child {
+      display: flex;
+      flex-direction: column;
+    }
+    &.open {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+}
+
+.navigation-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.scroll > * {
+  color: $primary-color !important;
+}
+.Links {
+  position: relative;
+  margin: auto 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $font-color;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    opacity 0.3s cubic-bezier(0.47, 0, 0.745, 0.715);
+
+  @include endPoint(sm) {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding-top: 0px;
+    padding-bottom: 5px;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: $primary-color;
+    width: 0%;
+    height: 4px;
+    border-radius: 45px;
+    transition: width 0.3s cubic-bezier(0.165, 0.84, 0.44, 1),
+      background-color 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  &:hover::after {
+    width: 95%;
+    @include endPoint(sm) {
+      background-color: $second-color;
+    }
+  }
+  &:hover {
+    color: $font-color;
+  }
+}
+
+.scroll_link {
+  &:hover::after {
+    background-color: $font-color;
+  }
+}

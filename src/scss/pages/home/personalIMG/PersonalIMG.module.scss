@@ -1,0 +1,70 @@
+@import "../../../utilites/variables";
+@import "../../../utilites/mixins";
+
+.img-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 320px;
+  height: calc(100vh - (200px));
+
+  -webkit-clip-path: polygon(
+    50% 6%,
+    88% 25%,
+    88% 63%,
+    49% 81%,
+    11% 62%,
+    10% 25%
+  );
+  clip-path: polygon(50% 6%, 88% 25%, 88% 63%, 49% 81%, 11% 62%, 10% 25%);
+  background-color: $primary-color;
+  margin-top: 20px;
+  animation: 5s cubic-bezier(0.645, 0.045, 0.355, 1) alternate infinite bounceY;
+
+  @include endPoint(sm) {
+    -webkit-clip-path: polygon(
+      49% 12%,
+      90% 25%,
+      90% 69%,
+      50% 86%,
+      10% 72%,
+      10% 25%
+    );
+    clip-path: polygon(49% 12%, 90% 25%, 90% 69%, 50% 86%, 10% 72%, 10% 25%);
+    width: calc(100% - 30px);
+    height: calc(100% - 229px);
+    aspect-ratio: 1 / 1;
+    margin-right: 0.5rem;
+  }
+}
+.main-img {
+  width: 100%;
+  height: 100%;
+
+  > img {
+    max-width: 100%;
+    height: inherit;
+    object-fit: cover;
+    object-position: center;
+    animation: 4s cubic-bezier(0.445, 0.05, 0.55, 0.95) alternate infinite
+      bounceX;
+  }
+}
+
+@keyframes bounceY {
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(30px);
+  }
+}
+@keyframes bounceX {
+  0% {
+    transform: translateX(-10px) translateY(10px);
+  }
+  100% {
+    transform: translateY(-20px) translateX(20px);
+  }
+}

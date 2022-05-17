@@ -1,0 +1,24 @@
+@import "../utilites/variables";
+@import "../utilites/mixins";
+
+.isLoadingContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 20000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $second-color;
+  > img {
+    max-width: 100%;
+    object-fit: cover;
+  }
+
+  body {
+    height: 100vh;
+    width: 100%;
+  }
+}

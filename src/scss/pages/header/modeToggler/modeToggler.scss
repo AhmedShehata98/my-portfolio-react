@@ -1,0 +1,46 @@
+@import "../../../utilites/variables";
+@import "../../../utilites/mixins";
+
+.buttonBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 100%;
+}
+.themeBotton-Wrapper {
+  position: relative;
+  width: 50px;
+  height: 22px;
+  background-color: $overlay-color;
+  border-radius: 50px;
+  border: 2px solid #dededd;
+
+  cursor: pointer;
+  transition: background-color 0.3s ease-out;
+
+  &.on {
+    background-color: $primary-color;
+  }
+}
+.theme-Button {
+  visibility: hidden;
+
+  &:checked + span {
+    transform: translateY(-50%) translateX(140%);
+  }
+}
+
+.modeIndicator {
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 0 0 20px 0 #111;
+  transition: transform 0.5s cubic-bezier(0.72, -0.01, 0.43, 0.99);
+}
+
+.scroll_themeMode {
+  background-color: $font-color !important;
+}
