@@ -1,4 +1,4 @@
-import React, { createContext } from "react";
+import React, { createContext, useState } from "react";
 // start import icons
 import html5 from "../assets/images/skills-icons/html5.svg";
 import css3 from "../assets/images/skills-icons/css3.svg";
@@ -14,6 +14,7 @@ siteDataCtx.displayName = "SiteLanguages";
 
 const siteData = {
   en: {
+    lang: "en",
     header: {
       navLinks: {
         navLinkHome: "Home",
@@ -206,6 +207,7 @@ const siteData = {
   },
 
   ar: {
+    lang: "ar",
     header: {
       navLinks: {
         navLinkHome: "الرئيسية",
@@ -308,6 +310,8 @@ const siteData = {
           name: "قائمة التذكير بما تريد مذاكرته [LocalStorage]",
           discription:
             "الادوات و التكنولوجي المستخدمة : [html -css- javascript ]",
+          sourceLink: "https://github.com/AhmedShehata98/To-Study-List",
+          demoLink: "https://ahmedshehata98.github.io/To-Study-List/",
         },
         {
           projectIMG:
@@ -316,6 +320,8 @@ const siteData = {
           name: "تطبيق معلومات الطقس",
           discription:
             "الادوات و التكنولوجي المستخدمة : [html - css - api- javascript ]",
+          sourceLink: "https://github.com/AhmedShehata98/Weather_App",
+          demoLink: "https://ahmedshehata98.github.io/Weather_App/",
         },
         {
           projectIMG:
@@ -324,6 +330,9 @@ const siteData = {
           name: "التجارة الإلكترونية - صفحة منتج",
           discription:
             "الادوات و التكنولوجي المستخدمة : [html - css - javascript ]",
+          sourceLink:
+            "https://github.com/AhmedShehata98/ecommerce-product-page",
+          demoLink: "https://ahmedshehata98.github.io/ecommerce-product-page/",
         },
         {
           projectIMG:
@@ -332,6 +341,10 @@ const siteData = {
           name: "تطبيق ادارة المخازن [api]",
           discription:
             "الادوات و التكنولوجي المستخدمة : [html - css - api - javascript ]",
+          sourceLink:
+            "https://github.com/AhmedShehata98/Inventory-management-system",
+          demoLink:
+            "https://ahmedshehata98.github.io/Inventory-management-system/",
         },
         {
           projectIMG:
@@ -339,6 +352,10 @@ const siteData = {
 
           name: "صفحة هبوط بسيطة ",
           discription: "الادوات و التكنولوجي المستخدمة : [html - css ]",
+          sourceLink:
+            "https://github.com/AhmedShehata98/Inventory-management-system",
+          demoLink:
+            "https://ahmedshehata98.github.io/Inventory-management-system/",
         },
         {
           projectIMG:
@@ -347,6 +364,10 @@ const siteData = {
           name: "تطبيق مشغل الموسيقي",
           discription:
             "الادوات و التكنولوجي المستخدمة : [html - css - javascript ]",
+          sourceLink:
+            "https://github.com/AhmedShehata98/sunnyside-agency-landing-page",
+          demoLink:
+            "https://ahmedshehata98.github.io/sunnyside-agency-landing-page/",
         },
       ],
       buttons: {
@@ -373,17 +394,22 @@ const siteData = {
       contactsBoxes: {
         email: "ahmedshehataq98@gmail.com",
         phonesNumbers: ["01096019665", "01559021655"],
-        linkedIN: "/ahmed-shehata-b63001225",
-        facebook: "https://www.facebook.com/MidoEsquire",
+        linkedIN: "linkedin.com/ahmed-shehata-b63001225",
+        facebook: "facebook.com/MidoEsquire",
         address: "مصر - الاسكندرية - منطة الحضرة الجديدة",
       },
     },
   },
 };
 
+console.log(siteData);
 const DataContentProvider = ({ children }) => {
+  let [locale, setLocale] = useState("en");
+
   return (
-    <siteDataCtx.Provider value={siteData["en"]}>
+    <siteDataCtx.Provider
+      value={{ languages: siteData[locale], setLanguage: setLocale }}
+    >
       {children}
     </siteDataCtx.Provider>
   );

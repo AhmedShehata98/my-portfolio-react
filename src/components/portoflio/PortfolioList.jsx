@@ -5,7 +5,9 @@ import { nanoid } from "nanoid";
 
 export const PortfolioList = () => {
   const {
-    portfolio: { projects },
+    languages: {
+      portfolio: { projects },
+    },
   } = useContext(siteDataCtx);
 
   let projectsList = projects.map(

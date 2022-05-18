@@ -10,8 +10,10 @@ import PortfolioList from "./PortfolioList";
 
 const Portfolio = () => {
   const {
-    portfolio: {
-      header: { title, subTitle, iconName },
+    languages: {
+      portfolio: {
+        header: { title, subTitle, iconName },
+      },
     },
   } = useContext(siteDataCtx);
   return (

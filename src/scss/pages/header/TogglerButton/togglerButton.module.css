@@ -7,6 +7,7 @@
 /* colors */
 /**********/
 :root {
+  --bs-body-font-family: "Nunito", sans-serif;
   --root-primary-color: #00bf76;
   --root-second-color: #041417;
   --root-overlay-color: #17201c;

@@ -6,10 +6,12 @@ import Row from "../layout/Row";
 
 function Form() {
   const {
-    contacts: {
-      form: {
-        form_fields: { firstField, secondField, thirdField, fourthField },
-        buttons: { btn_1, btn_2 },
+    languages: {
+      contacts: {
+        form: {
+          form_fields: { firstField, secondField, thirdField, fourthField },
+          buttons: { btn_1, btn_2 },
+        },
       },
     },
   } = useContext(siteDataCtx);

@@ -4,8 +4,10 @@ import styles from "../../scss/pages/contacts/contactsBoxes/contactsBoxes.module
 
 function ContactsBoxes() {
   const {
-    contacts: {
-      contactsBoxes: { email, phonesNumbers, linkedIN, facebook, address },
+    languages: {
+      contacts: {
+        contactsBoxes: { email, phonesNumbers, linkedIN, facebook, address },
+      },
     },
   } = useContext(siteDataCtx);
   return (

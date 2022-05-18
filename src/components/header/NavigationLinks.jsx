@@ -7,13 +7,15 @@ const NavigationLinks = ({ navLinkVisibility, headerActive }) => {
   const siteData = useContext(siteDataCtx);
 
   let {
-    header: {
-      navLinks: {
-        navLinkHome,
-        navLinkAbout,
-        navLinkSkills,
-        navLinkPortfolio,
-        navLinkContent,
+    languages: {
+      header: {
+        navLinks: {
+          navLinkHome,
+          navLinkAbout,
+          navLinkSkills,
+          navLinkPortfolio,
+          navLinkContent,
+        },
       },
     },
   } = siteData;

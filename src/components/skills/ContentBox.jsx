@@ -6,8 +6,10 @@ import SkillsBoxsInteration from "./SkillsBoxsInteration";
 
 const ContentBox = ({ headingTitle1, headingTitle2 }) => {
   let {
-    skills: {
-      main_content: { framework_and_Langlist, toolsList },
+    languages: {
+      skills: {
+        main_content: { framework_and_Langlist, toolsList },
+      },
     },
   } = useContext(siteDataCtx);
 

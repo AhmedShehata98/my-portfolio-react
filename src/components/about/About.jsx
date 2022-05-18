@@ -9,7 +9,9 @@ import DetailsBox from "./DetailsBox";
 
 const About = () => {
   const {
-    about: { name },
+    languages: {
+      about: { name },
+    },
   } = useContext(siteDataCtx);
   // getComputedStyle(document.documentElement).getPropertyValue('--root-black-color')
   return (

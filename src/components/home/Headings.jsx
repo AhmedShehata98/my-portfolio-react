@@ -6,7 +6,9 @@ import HireButton from "./HireButton";
 const Headings = () => {
   const siteData = useContext(siteDataCtx);
   let {
-    home_page: { headding, sub_headding },
+    languages: {
+      home_page: { headding, sub_headding },
+    },
   } = siteData;
 
   return (

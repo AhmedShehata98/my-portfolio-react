@@ -4,7 +4,9 @@ import { siteDataCtx } from "../../contexts/dataContentContext";
 
 function SkillsButton({ styles }) {
   let {
-    about: { button },
+    languages: {
+      about: { button },
+    },
   } = useContext(siteDataCtx);
   return (
     <Fragment>

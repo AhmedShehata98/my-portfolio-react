@@ -5,7 +5,9 @@ import styles from "../../scss/pages/home/hireButton/hireButton.module.css";
 const HireButton = () => {
   const siteData = useContext(siteDataCtx);
   const {
-    home_page: { hire_Button },
+    languages: {
+      home_page: { hire_Button },
+    },
   } = siteData;
 
   return (

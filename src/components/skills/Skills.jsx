@@ -7,9 +7,11 @@ import SectionHeader from "../layout/SectionHeader";
 
 const Skills = () => {
   let {
-    skills: {
-      headdingBox: { section_title, sub_title, iconName },
-      main_content: { titleTwo, titleThree },
+    languages: {
+      skills: {
+        headdingBox: { section_title, sub_title, iconName },
+        main_content: { titleTwo, titleThree },
+      },
     },
   } = useContext(siteDataCtx);
 

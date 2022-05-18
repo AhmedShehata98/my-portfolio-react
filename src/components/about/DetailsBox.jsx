@@ -5,7 +5,9 @@ import styles from "../../scss/pages/about/detailsBox/detalisBox.module.css";
 
 function DetailsBox() {
   let {
-    about: { section_heading, details },
+    languages: {
+      about: { section_heading, details },
+    },
   } = useContext(siteDataCtx);
   return (
     <div className={styles["details-box"]}>

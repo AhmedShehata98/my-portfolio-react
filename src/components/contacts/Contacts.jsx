@@ -11,8 +11,10 @@ import ContactsBoxes from "../contacts/ContactsBoxes";
 
 function Contacts() {
   const {
-    contacts: {
-      header: { iconName, title, subTitle },
+    languages: {
+      contacts: {
+        header: { iconName, title, subTitle },
+      },
     },
   } = useContext(siteDataCtx);
 
