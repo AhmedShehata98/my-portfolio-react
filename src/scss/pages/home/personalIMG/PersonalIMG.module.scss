@@ -8,6 +8,7 @@
   align-items: center;
   width: 500px;
   height: calc(100vh - (200px));
+  aspect-ratio: 1 / 1;
 
   -webkit-clip-path: polygon(
     50% 6%,
@@ -32,8 +33,8 @@
       10% 25%
     );
     clip-path: polygon(49% 12%, 90% 25%, 90% 69%, 50% 86%, 10% 72%, 10% 25%);
-    width: calc(100% - 30px);
-    height: calc(100% - 229px);
+    width: 100%;
+    height: 70%;
     aspect-ratio: 1 / 1;
     margin-right: 0.5rem;
   }

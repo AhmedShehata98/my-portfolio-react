@@ -6,12 +6,11 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: calc(95vh - 70px);
+  height: calc(95vh - 150px);
   width: 30px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+
   @include endPoint(sm) {
-    margin-top: 1.5rem !important;
+    // margin-top: 1.5rem !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
   }

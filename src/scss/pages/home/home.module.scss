@@ -5,6 +5,10 @@
   position: relative;
   z-index: 4;
   min-height: (100vh);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 .overlay {
   position: absolute;
@@ -31,8 +35,27 @@
   position: relative;
   z-index: 5;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
+  align-items: center;
+  @include endPoint(sm) {
+    align-items: flex-end;
+    margin-bottom: 4.5rem;
+  }
+}
+.homeItems-wrapper {
+  // headings and image and scroll down
+  display: flex;
   align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+
+  @include endPoint(sm) {
+    align-items: center;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    height: 79vh;
+  }
 }
 
 .ScrollDown_Wrapper {
@@ -47,7 +70,7 @@
   height: 45px;
 
   @include endPoint(sm) {
-    bottom: 35%;
+    bottom: 25%;
   }
 }
 .ScrollDown_Icon {

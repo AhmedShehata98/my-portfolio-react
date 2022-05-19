@@ -31,13 +31,12 @@ const Home = () => {
     if (innerWidth <= 991) {
       mediaScreenStyles = {
         display: "flex",
-        position: "absolute",
         flexDirection: "column-reverse",
-        justifyContent: "space-between",
+        justifyContent: "center",
         alignItems: "center",
         width: "90%",
         height: "95vh",
-        padding: "0.5rem 0 0.5rem 4rem",
+        // padding: "0.5rem 0 0.5rem 4rem",
       };
     }
     return mediaScreenStyles;
@@ -54,7 +53,8 @@ const Home = () => {
       <div className={styles["overlay"]}></div>
       <section className={`${styles.HomeContainer} container`}>
         <SocialMediaLinks />
-        <div style={{ ...handleMediaScreen(innerWidth) }}>
+        {/* style={{ ...handleMediaScreen(innerWidth) } */}
+        <div className={styles["homeItems-wrapper"]}>
           <Headings />
           <div className={styles.ScrollDown_Wrapper}>
             <span className={styles.ScrollDown_Icon}>

@@ -36,15 +36,12 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: calc(95vh - 70px);
+  height: calc(95vh - 150px);
   width: 30px;
-  padding-top: 15px;
-  padding-bottom: 15px;
 }
 
 @media (max-width: 768px) {
   .social-media {
-    margin-top: 1.5rem !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
   }

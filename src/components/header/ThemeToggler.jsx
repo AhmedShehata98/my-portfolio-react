@@ -1,4 +1,5 @@
 import React from "react";
+import useLocalStorage from "../../hooks/useLocalStorage";
 
 import "../../scss/pages/header/modeToggler/modeToggler.css";
 
@@ -96,6 +97,9 @@ function ThemeToggler({ themeButton, setThemeButton, headerActive }) {
   if (themeButton && headerActive < 90) {
     ThemeButton_Wrapper = "themeBotton-Wrapper on";
   }
+
+  // let [localstorage, length] = useLocalStorage("ahmed", "age:24");
+  // let [localstorage2, length2] = useLocalStorage("ahmed 2", "age:28");
 
   return (
     <div className="buttonBox">
