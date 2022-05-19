@@ -39,6 +39,7 @@ const siteData = {
        Graduate Specialized Decoration .`,
 
       button: "skills",
+      programingLang: [html5, css3, javascript, bootstrap, sass, typescript],
     },
     skills: {
       headdingBox: {
@@ -211,9 +212,9 @@ const siteData = {
     header: {
       navLinks: {
         navLinkHome: "الرئيسية",
-        navLinkAbout: "غني",
+        navLinkAbout: "عني",
         navLinkSkills: "مهارات",
-        navLinkPortfolio: "اعمالي",
+        navLinkPortfolio: "أعمالي",
         navLinkContent: "تواصل",
       },
       LocaleButton: "en",
@@ -233,6 +234,7 @@ const siteData = {
        `,
 
       button: "مهاراتي",
+      programingLang: [html5, css3, javascript, bootstrap, sass, typescript],
     },
     skills: {
       headdingBox: {

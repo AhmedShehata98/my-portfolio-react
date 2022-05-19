@@ -13,7 +13,7 @@ const About = () => {
       about: { name },
     },
   } = useContext(siteDataCtx);
-  // getComputedStyle(document.documentElement).getPropertyValue('--root-black-color')
+
   return (
     <div className={styles["about"]} id="About">
       <Container>

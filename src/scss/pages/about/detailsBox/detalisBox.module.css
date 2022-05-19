@@ -53,7 +53,7 @@
   font-size: 1.5rem;
   border: 1px solid var(--root-boxes-bdColor);
   width: 60%;
-  text-align: center;
+  text-align: start;
   padding: 5px 10px;
   background-color: var(--root-boxes-bdColor);
   color: var(--root-boxes-bgColor);
@@ -92,7 +92,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 40%;
+  width: 45%;
   height: 35px;
   text-transform: capitalize;
   font-size: 1.3rem;
@@ -113,5 +113,33 @@
   .SkillsButton {
     width: 100%;
   }
+}
+
+.programingLanges {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  padding: 0;
+  margin-bottom: 2.5rem;
+}
+
+.programingLanges > li {
+  list-style: none;
+  opacity: 0.7;
+  -webkit-filter: contrast(50%);
+          filter: contrast(50%);
+}
+
+.programingLanges > li:hover {
+  opacity: 1;
+  -webkit-filter: contrast(100%);
+          filter: contrast(100%);
 }
 /*# sourceMappingURL=detalisBox.module.css.map */

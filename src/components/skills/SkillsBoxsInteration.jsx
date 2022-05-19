@@ -1,21 +1,46 @@
-import React from "react";
+import React, { useContext } from "react";
 import { nanoid } from "nanoid";
-
+import { siteDataCtx } from "../../contexts/dataContentContext";
 import styles from "../../scss/pages/skills/laguesList/SkillsBoxsInteration.module.css";
 
 function SkillsBoxsInteration({ iterationItem }) {
+  const {
+    languages: { lang },
+  } = useContext(siteDataCtx);
+
   const langesListLoop = Object.entries(iterationItem).map(
     ({ 1: { iconName, id, itemName, persent } }) => {
       return (
         <li className={styles["LanguageBox"]} key={nanoid(6)}>
           <p className={styles["count"]}>{"0" + (id + 1)}</p>
-          <img className={styles["icon"]} src={iconName} alt={"icon #" + id} />
+          <img
+            style={
+              lang === "ar"
+                ? { marginRight: "0.75rem" }
+                : { marginLeft: "initial" }
+            }
+            className={styles["icon"]}
+            src={iconName}
+            alt={"icon #" + id}
+          />
 
-          <div className={styles["nameOverlay"]}>
+          <div
+            style={
+              lang === "ar"
+                ? { justifyContent: "center" }
+                : { justifyContent: "initial" }
+            }
+            className={styles["nameOverlay"]}
+          >
             <h5 className={styles["LanguageName"]}>{itemName}</h5>
           </div>
           <div className={styles["skillProgress"]}>
-            <span style={{ width: persent }}>.</span>
+            <span
+              className={lang === "ar" ? styles["rtl-skillProgress"] : ""}
+              style={{ width: persent }}
+            >
+              .
+            </span>
           </div>
         </li>
       );
