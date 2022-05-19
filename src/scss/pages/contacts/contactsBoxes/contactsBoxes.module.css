@@ -17,6 +17,7 @@
   --root-progress-foreground: #f8f8f8;
   --root-progress-backround: #6a6a6aab;
   --root-projects-backround: #fca311d3;
+  --root-hover-box: #eedd9d;
   --root-projects-text: #03045e;
   --root-font-color: #eeffee;
 }
@@ -45,6 +46,7 @@
 }
 
 .box-wrapper {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -58,13 +60,34 @@
       flex-wrap: wrap;
   padding: 0.4rem 1rem;
   background-color: var(--root-boxes-bgColor);
-  border: 3px solid var(--root-boxes-bdColor);
   list-style: none;
   width: 100%;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
   gap: 1rem;
+}
+
+.box-wrapper:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 100%;
+  background-color: var(--root-hover-box);
+  -webkit-transition: width 0.5s ease-out;
+  transition: width 0.5s ease-out;
+}
+
+.box-wrapper:hover::after {
+  width: 100%;
+}
+
+.box-wrapper:hover > :first-child,
+.box-wrapper:hover :last-child {
+  color: var(--root-boxes-bdColor);
 }
 
 @media (max-width: 768px) {
@@ -80,15 +103,26 @@
   }
 }
 
+.icon {
+  position: relative;
+  z-index: 2;
+  -webkit-transition: color 0.5s ease-out;
+  transition: color 0.5s ease-out;
+}
+
 .icon > :first-child {
   color: var(--root-font-color);
   font-size: 1.5rem;
 }
 
 .name {
+  position: relative;
+  z-index: 2;
   color: var(--root-boxes-bdColor);
   text-transform: capitalize;
   font-weight: 700;
   margin-bottom: 0;
+  -webkit-transition: color 0.5s ease-out;
+  transition: color 0.5s ease-out;
 }
 /*# sourceMappingURL=contactsBoxes.module.css.map */

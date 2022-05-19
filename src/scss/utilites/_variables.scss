@@ -20,6 +20,7 @@
   --root-progress-foreground: #f8f8f8;
   --root-progress-backround: #6a6a6aab;
   --root-projects-backround: #fca311d3;
+  --root-hover-box: #eedd9d;
   --root-projects-text: #03045e;
   --root-font-color: #eeffee;
 }
@@ -37,6 +38,7 @@ $boxes-bdColor: var(--root-boxes-bdColor);
 $progress-foreground: var(--root-progress-foreground);
 $progress-backround: var(--root-progress-backround);
 $projects-backround: var(--root-projects-backround);
+$hover-box: var(--root-hover-box);
 $projects-text: var(--root-projects-text);
 $font-color: var(--root-font-color);
 $header-height: 60px;

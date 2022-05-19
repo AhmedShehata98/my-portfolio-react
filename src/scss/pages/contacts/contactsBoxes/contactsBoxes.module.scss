@@ -13,17 +13,39 @@
   flex-grow: 1;
 }
 .box-wrapper {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   flex-wrap: wrap;
   padding: 0.4rem 1rem;
   background-color: $boxes-bgColor;
-  border: 3px solid $boxes-bdColor;
+  // border: 3px solid $boxes-bdColor;
   list-style: none;
   width: 100%;
   flex-grow: 1;
   gap: 1rem;
+
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 100%;
+    background-color: $hover-box;
+    transition: width 0.5s ease-out;
+  }
+  &:hover {
+    &::after {
+      width: 100%;
+    }
+    > :first-child,
+    :last-child {
+      color: $boxes-bdColor;
+    }
+  }
 
   @include endPoint(sm) {
     gap: 4px;
@@ -32,14 +54,20 @@
   }
 }
 .icon {
+  position: relative;
+  z-index: 2;
+  transition: color 0.5s ease-out;
   > :first-child {
     color: $font-color;
     font-size: 1.5rem;
   }
 }
 .name {
+  position: relative;
+  z-index: 2;
   color: $boxes-bdColor;
   text-transform: capitalize;
   font-weight: 700;
   margin-bottom: 0;
+  transition: color 0.5s ease-out;
 }
