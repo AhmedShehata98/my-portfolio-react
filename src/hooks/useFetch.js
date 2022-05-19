@@ -10,27 +10,25 @@ const useFetch = (url = "", body = {}) => {
     startFetch !== false && fetchData();
   }, [startFetch]);
 
-  function fetchData() {
-    fetch(url, body)
-      .then((response) => response.json())
-      .then((response) => {
-        setError(null);
-        setData(response);
-      })
-      .catch((error) => {
-        setError(error);
-        setData(null);
-      })
-      .finally(() => {
-        setIsLoading(false);
-      });
-    setStartFetch(false);
+  async function fetchData() {
+    try {
+      let response = await fetch(url, body),
+        data = await response.json();
+      //
+      setData(data);
+      setError(null);
+    } catch (error) {
+      setError(error);
+      setData(null);
+    } finally {
+      setIsLoading(false);
+    }
   }
   function startSend() {
     setStartFetch(true);
   }
 
-  return { Data, Error, isLoading, startSend };
+  return [Data, Error, isLoading, startSend];
 };
 
 export default useFetch;
