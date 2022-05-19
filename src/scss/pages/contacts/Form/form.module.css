@@ -102,4 +102,45 @@
 .resetButton:hover {
   opacity: 0.5;
 }
+
+.showMessage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 8px;
+  background-color: var(--root-overlay-color);
+  border: 2px solid var(--root-boxes-bgColor);
+  padding: 00.375rem 1rem;
+  margin: 1rem 0;
+}
+
+.showMessage.error {
+  border-color: #f60;
+}
+
+.showMessage > span {
+  color: var(--root-boxes-bgColor);
+  font-size: 1.7rem;
+}
+
+.showMessage > span.error {
+  color: #f60;
+}
+
+.showMessage h5 {
+  color: var(--root-font-color);
+  margin-bottom: 0;
+  text-transform: capitalize;
+}
+
+.showMessage > button {
+  background-color: #f60;
+  margin: auto;
+}
 /*# sourceMappingURL=form.module.css.map */

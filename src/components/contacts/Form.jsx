@@ -7,12 +7,14 @@ import useForm from "../../hooks/useForm";
 import useFetch from "../../hooks/useFetch";
 
 function Form() {
+  let [showMessage, setShowMessage] = useState(false);
+  let [showbuttons, setShowbuttons] = useState(true);
   let [firstName, bindFirstName, resetFirstName] = useForm("");
   let [LastName, bindLastName, resetLastName] = useForm("");
   let [Subject, bindSubject, resetSubject] = useForm("");
   let [Message, bindMessage, resetMessage] = useForm("");
   let url = "https://submit-form.com/LlCsjZCe";
-  let body = JSON.stringify({
+  let FixedMessage = {
     message: `Welcome - and I'am : ${firstName} ${LastName} , The subject is =>${
       Subject === undefined || Subject === ""
         ? "clinet isnt enterd subject its empty"
@@ -22,20 +24,99 @@ function Form() {
         ? "clinet isnt enterd message it's empty"
         : Message
     }`,
-  });
+  };
 
-  let { isLoading, startSend } = useFetch(url, {
+  let [Data, Error, isLoading, startSend] = useFetch(url, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
       Accept: "application/json",
     },
-    body: body,
+    body: JSON.stringify(FixedMessage),
   });
 
   function handleSubmit(e) {
     e.preventDefault();
     startSend();
+    if (Data !== null && !isLoading) {
+      setShowMessage(true);
+      setShowbuttons(false);
+      setTimeout(() => {
+        setShowMessage(false);
+        setShowbuttons(true);
+      }, 3000);
+      clearTimeout(
+        setTimeout(() => {
+          setShowMessage(false);
+          setShowbuttons(true);
+        }, 3000)
+      );
+    }
+  }
+
+  function handleMessageJsx(data, isLoading) {
+    if (!isLoading && data !== null && showMessage) {
+      return (
+        <Col>
+          <div className={styles.showMessage}>
+            <span>
+              <i className="bi bi-check-circle"></i>
+            </span>
+            <h5>message has been sent successfully .</h5>
+            <button
+              onClick={() => setShowMessage(false)}
+              className="btn-close"
+              type="button"
+            ></button>
+          </div>
+        </Col>
+      );
+    }
+    if (isLoading && data === null && Error !== null) {
+      return (
+        <Col>
+          <div className={`${styles.showMessage} ${styles.error}`}>
+            <span className={styles["error"]}>
+              <i className="bi bi-x-circle"></i>
+            </span>
+            <h5>something went wrong !!</h5>
+            <button
+              onClick={() => setShowMessage(false)}
+              className={styles["error"]}
+              type="button"
+            >
+              <i className="bi bi-x-lg"></i>
+            </button>
+          </div>
+        </Col>
+      );
+    }
+  }
+
+  function returnButons() {
+    return (
+      <Fragment>
+        <Col class_list="col-12 col-md-5">
+          <button className={styles["sendButton"]} type="submit">
+            {btn_1}
+          </button>
+        </Col>
+        <Col class_list="col-12 col-md-5">
+          <button
+            className={styles["resetButton"]}
+            type="reset"
+            onClick={() => {
+              resetFirstName();
+              resetLastName();
+              resetSubject();
+              resetMessage();
+            }}
+          >
+            {btn_2}
+          </button>
+        </Col>
+      </Fragment>
+    );
   }
 
   const {
@@ -100,7 +181,8 @@ function Form() {
         </Col>
       </Row>
       <Row class_list="justify-content-around">
-        {isLoading === true ? (
+        {showMessage && handleMessageJsx(Data, isLoading)}
+        {showbuttons && (
           <Fragment>
             <Col class_list="col-12 col-md-5">
               <button className={styles["sendButton"]} type="submit">
@@ -122,28 +204,7 @@ function Form() {
               </button>
             </Col>
           </Fragment>
-        ) : (
-          <div>Success !</div>
         )}
-        {/* <Col class_list="col-12 col-md-5">
-          <button className={styles["sendButton"]} type="submit">
-            {btn_1}
-          </button>
-        </Col>
-        <Col class_list="col-12 col-md-5">
-          <button
-            className={styles["resetButton"]}
-            type="reset"
-            onClick={() => {
-              resetFirstName();
-              resetLastName();
-              resetSubject();
-              resetMessage();
-            }}
-          >
-            {btn_2}
-          </button>
-        </Col> */}
       </Row>
     </form>
   );
