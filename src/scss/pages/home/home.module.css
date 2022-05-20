@@ -8,16 +8,18 @@
 /**********/
 :root {
   --bs-body-font-family: "Nunito", sans-serif;
-  --root-primary-color: #00bf76;
+  --root-primary-color: #33a06f;
   --root-second-color: #041417;
   --root-overlay-color: #17201c;
   --root-white-color: #f6f6f6;
-  --root-boxes-bgColor: #00bf76;
+  --root-boxes-bgColor: #33a06f;
   --root-boxes-bdColor: #15201c;
   --root-progress-foreground: #f8f8f8;
   --root-progress-backround: #6a6a6aab;
   --root-projects-backround: #fca311d3;
   --root-hover-box: #eedd9d;
+  --root-service-box: #33a06f;
+  --root-service-box-clr: #ffe417;
   --root-projects-text: #03045e;
   --root-font-color: #eeffee;
 }
@@ -26,7 +28,7 @@
 /* Preset body */
 /***************/
 body {
-  background-color: var(--root-overlay-color);
+  background-color: var(--root-second-color);
   -webkit-transition: background-color 0.7s cubic-bezier(0.65, 0.21, 0.65, 1.24);
   transition: background-color 0.7s cubic-bezier(0.65, 0.21, 0.65, 1.24);
   -webkit-animation-name: pageLoading;
@@ -35,6 +37,8 @@ body {
           animation-duration: 1.1s;
   -webkit-animation-timing-function: ease-out;
           animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 
 @-webkit-keyframes pageLoading {

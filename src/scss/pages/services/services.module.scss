@@ -1,0 +1,80 @@
+@import "../../utilites/variables";
+@import "../../utilites/mixins";
+
+.services {
+  min-height: 100vh;
+  position: relative;
+  border-bottom: 2px solid $primary-color;
+}
+.servciesList-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(265px, max-content));
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+}
+
+.service {
+  position: relative;
+  background-color: $boxes-bgColor;
+  border: 2px solid $boxes-bdColor;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20%;
+}
+.icon {
+  position: absolute;
+  z-index: 2;
+  top: -15%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -14%);
+  background-color: $service-box;
+  width: 110px;
+  height: 110px;
+  aspect-ratio: 1 / 1;
+  clip-path: polygon(21% 6%, 80% 6%, 100% 50%, 81% 95%, 20% 95%, 0% 50%);
+
+  > span {
+    > :first-child {
+      font-size: 2.5rem;
+      color: $service-box-clr;
+      user-select: none;
+    }
+  }
+}
+.box-overlay {
+  position: absolute;
+  z-index: 1;
+  top: -37.5px;
+  left: 50%;
+  transform: translate(-50%, -37.5px);
+  background-color: var(--root-second-color);
+  width: 140px;
+  height: 145px;
+  clip-path: polygon(40% 50%, 77% 49%, 100% 50%, 81% 95%, 20% 95%, 0% 50%);
+}
+.content-body {
+  padding: 0.5rem 1rem;
+  margin-top: 4rem;
+  text-align: start;
+  user-select: none;
+}
+.name {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: $service-box-clr;
+  letter-spacing: 0.2rem;
+}
+.description {
+  text-transform: capitalize;
+  text-align: justify;
+  font-weight: 600;
+  margin-bottom: 0;
+}

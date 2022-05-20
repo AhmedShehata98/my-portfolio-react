@@ -1,0 +1,136 @@
+/**********/
+/* fonts */
+/**********/
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap");
+/**********/
+/* colors */
+/**********/
+:root {
+  --bs-body-font-family: "Nunito", sans-serif;
+  --root-primary-color: #33a06f;
+  --root-second-color: #041417;
+  --root-overlay-color: #17201c;
+  --root-white-color: #f6f6f6;
+  --root-boxes-bgColor: #33a06f;
+  --root-boxes-bdColor: #15201c;
+  --root-progress-foreground: #f8f8f8;
+  --root-progress-backround: #6a6a6aab;
+  --root-projects-backround: #fca311d3;
+  --root-hover-box: #eedd9d;
+  --root-service-box: #33a06f;
+  --root-service-box-clr: #ffe417;
+  --root-projects-text: #03045e;
+  --root-font-color: #eeffee;
+}
+
+.services {
+  min-height: 100vh;
+  position: relative;
+  border-bottom: 2px solid var(--root-primary-color);
+}
+
+.servciesList-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(265px, max-content))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(265px, -webkit-max-content));
+      grid-template-columns: repeat(auto-fit, minmax(265px, max-content));
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+}
+
+.service {
+  position: relative;
+  background-color: var(--root-boxes-bgColor);
+  border: 2px solid var(--root-boxes-bdColor);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20%;
+}
+
+.icon {
+  position: absolute;
+  z-index: 2;
+  top: -15%;
+  left: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: translate(-50%, -14%);
+          transform: translate(-50%, -14%);
+  background-color: var(--root-service-box);
+  width: 110px;
+  height: 110px;
+  aspect-ratio: 1 / 1;
+  -webkit-clip-path: polygon(21% 6%, 80% 6%, 100% 50%, 81% 95%, 20% 95%, 0% 50%);
+          clip-path: polygon(21% 6%, 80% 6%, 100% 50%, 81% 95%, 20% 95%, 0% 50%);
+}
+
+.icon > span > :first-child {
+  font-size: 2.5rem;
+  color: var(--root-service-box-clr);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.box-overlay {
+  position: absolute;
+  z-index: 1;
+  top: -37.5px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -37.5px);
+          transform: translate(-50%, -37.5px);
+  background-color: var(--root-second-color);
+  width: 140px;
+  height: 145px;
+  -webkit-clip-path: polygon(40% 50%, 77% 49%, 100% 50%, 81% 95%, 20% 95%, 0% 50%);
+          clip-path: polygon(40% 50%, 77% 49%, 100% 50%, 81% 95%, 20% 95%, 0% 50%);
+}
+
+.content-body {
+  padding: 0.5rem 1rem;
+  margin-top: 4rem;
+  text-align: start;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.name {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--root-service-box-clr);
+  letter-spacing: 0.2rem;
+}
+
+.description {
+  text-transform: capitalize;
+  text-align: justify;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+/*# sourceMappingURL=services.module.css.map */

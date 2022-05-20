@@ -10,17 +10,19 @@
 
 :root {
   --bs-body-font-family: "Nunito", sans-serif;
-  --root-primary-color: #00bf76;
+  --root-primary-color: #33a06f;
   --root-second-color: #041417;
   --root-overlay-color: #17201c;
   // --root-black-color: #f6f6f6;
   --root-white-color: #f6f6f6;
-  --root-boxes-bgColor: #00bf76;
+  --root-boxes-bgColor: #33a06f;
   --root-boxes-bdColor: #15201c;
   --root-progress-foreground: #f8f8f8;
   --root-progress-backround: #6a6a6aab;
   --root-projects-backround: #fca311d3;
   --root-hover-box: #eedd9d;
+  --root-service-box: #33a06f;
+  --root-service-box-clr: #ffe417;
   --root-projects-text: #03045e;
   --root-font-color: #eeffee;
 }
@@ -39,6 +41,8 @@ $progress-foreground: var(--root-progress-foreground);
 $progress-backround: var(--root-progress-backround);
 $projects-backround: var(--root-projects-backround);
 $hover-box: var(--root-hover-box);
+$service-box: var(--root-service-box);
+$service-box-clr: var(--root-service-box-clr);
 $projects-text: var(--root-projects-text);
 $font-color: var(--root-font-color);
 $header-height: 60px;

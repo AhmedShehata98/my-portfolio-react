@@ -41,6 +41,46 @@ const siteData = {
       button: "skills",
       programingLang: [html5, css3, javascript, bootstrap, sass, typescript],
     },
+    services: {
+      header: {
+        title: "what i do ?",
+        subTitle:
+          "Below is an overview of the things I'm good at in the field of 'developing web applications' ",
+        iconName: "bi bi-lightbulb",
+      },
+      servicesList: [
+        {
+          serviceName: "freelancer",
+          serviceDescription:
+            "I am happy to know the idea of your application that you want to implement and turn this idea into a real application that brings you willing customers",
+          serviceIcon: "bi bi-person-workspace",
+        },
+        {
+          serviceName: "performance",
+          serviceDescription:
+            "An application that saves you time in times of fast site loading, lag-free interaction and good performance, this is my top priority",
+          serviceIcon: "bi bi-speedometer",
+        },
+        {
+          serviceName: "responsive ",
+          serviceDescription:
+            " It is a necessity today in any web application that this application be suitable on most screens of electronic devices. And this, of course, is what I answer",
+          serviceIcon: "bi bi-arrows-fullscreen",
+        },
+        {
+          serviceName: "Less budget, more time",
+          serviceDescription:
+            " Finish the project in the shortest possible time. With the cost of the project budget less and save as much as possible",
+          serviceIcon: "bi bi-currency-dollar",
+        },
+        {
+          serviceName: "Create web applications ",
+          serviceDescription:
+            "Create a website based on your idea and turn this idea into a web application that serves your customers and upload it to a suitable hosting to achieve access to it from anywhere",
+          serviceIcon: "bi bi-window-fullscreen",
+        },
+      ],
+    },
     skills: {
       headdingBox: {
         iconName: "bi bi-terminal-fill",
@@ -244,6 +284,45 @@ const siteData = {
 
       button: "مهاراتي",
       programingLang: [html5, css3, javascript, bootstrap, sass, typescript],
+    },
+    services: {
+      header: {
+        title: "ما اجيده ؟",
+        subTitle:
+          'فيما يلي بالاسفل نبذة عامة فيما الاشياء التي اجيدها في مجال  " نطوير و انشاء تطبيقات ويب" ',
+      },
+      servicesList: [
+        {
+          serviceName: "فري لانسر",
+          serviceDescription:
+            " يسعدني معرفة فكرة تطبيقك الني تريد ان نتفذها و احول الفكرة هذة الي نطبيق حقيقي يجلب لك العملاء المستعدفون",
+          serviceIcon: "bi bi-person-workspace",
+        },
+        {
+          serviceName: "اداء",
+          serviceDescription:
+            " تطبيق يوفر لك الوقت في أوقات التحميل السريع للموقع والتفاعل الخالي من التأخير و اداء جيد ، هذا هو أولويتي القصوى",
+          serviceIcon: "bi bi-speedometer",
+        },
+        {
+          serviceName: "استجابة و ملائمة ",
+          serviceDescription:
+            " من الضروريات اليوم في اي تطبيق من تطبيقات الويب ان يكون هذا التطبيق ملائم علي معظم شاشات الاجهزة الالكترونية . و هذا بالطبع ما اجيبه",
+          serviceIcon: "bi bi-arrows-fullscreen",
+        },
+        {
+          serviceName: " ميذانية اقل وقت اوفر ",
+          serviceDescription:
+            " انهاء المشروع في اقل وقت ممكن . مع تكلفة لميذانية المشروع اقل و اوفر بقدر المستطاء ",
+          serviceIcon: "bi bi-currency-dollar",
+        },
+        {
+          serviceName: "انشاء مواقع و تطبيقان ويب ",
+          serviceDescription:
+            " انشاء موقع ويب مستندا علي فكرتك و تحويل الفكرة هذه الي تطبيق ويب يخدم عملائك و رفعه علي استضافة مناسبة لتحقيق الوصول اليه من اي مكان",
+          serviceIcon: "bi bi-window-fullscreen",
+        },
+      ],
     },
     skills: {
       headdingBox: {
