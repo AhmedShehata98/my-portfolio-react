@@ -125,4 +125,17 @@
   -webkit-transition: color 0.5s ease-out;
   transition: color 0.5s ease-out;
 }
+
+.copyText {
+  position: absolute;
+  z-index: 2;
+  right: 1px;
+  border: none;
+  background-color: transparent;
+}
+
+.copyText > :first-child {
+  font-size: 1.5rem;
+  color: var(--root-boxes-bdColor);
+}
 /*# sourceMappingURL=contactsBoxes.module.css.map */

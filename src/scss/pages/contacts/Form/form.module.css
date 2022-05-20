@@ -99,6 +99,14 @@
   border: 1px solid var(--root-boxes-bgColor);
 }
 
+@media (max-width: 768px) {
+  .sendButton,
+  .resetButton {
+    -webkit-margin-after: 0.75rem;
+            margin-block-end: 0.75rem;
+  }
+}
+
 .sendButton:hover,
 .resetButton:hover {
   opacity: 0.5;

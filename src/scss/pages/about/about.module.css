@@ -80,6 +80,12 @@
   margin-bottom: 2rem;
 }
 
+@media (max-width: 768px) {
+  .border {
+    padding: 1.5rem;
+  }
+}
+
 .name {
   border: 2px solid var(--root-boxes-bdColor);
   padding: 5px 10px;

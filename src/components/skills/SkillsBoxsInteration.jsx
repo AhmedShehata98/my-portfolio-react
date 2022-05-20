@@ -13,17 +13,9 @@ function SkillsBoxsInteration({ iterationItem }) {
       return (
         <li className={styles["LanguageBox"]} key={nanoid(6)}>
           <p className={styles["count"]}>{"0" + (id + 1)}</p>
-          <img
-            style={
-              lang === "ar"
-                ? { marginRight: "0.75rem" }
-                : { marginLeft: "initial" }
-            }
-            className={styles["icon"]}
-            src={iconName}
-            alt={"icon #" + id}
-          />
-
+          <div className={styles["icon"]}>
+            <img src={iconName} alt={"icon #" + id} />
+          </div>
           <div
             style={
               lang === "ar"

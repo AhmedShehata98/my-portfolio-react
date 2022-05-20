@@ -5,11 +5,11 @@
   height: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, max-content));
-  // place-content: center;
   place-items: center;
   justify-content: center;
   align-items: flex-start;
   padding: 0;
+  margin: 0;
   row-gap: 25px;
   column-gap: 8px;
 }
@@ -19,6 +19,11 @@
   overflow: hidden;
   border: 1px solid $font-color;
   background-color: $primary-color;
+
+  @include endPoint(sm) {
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+  }
 
   > img {
     max-width: 100%;

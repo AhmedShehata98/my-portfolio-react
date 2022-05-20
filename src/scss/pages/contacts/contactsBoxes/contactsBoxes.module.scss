@@ -71,3 +71,14 @@
   margin-bottom: 0;
   transition: color 0.5s ease-out;
 }
+.copyText {
+  position: absolute;
+  z-index: 2;
+  right: 1px;
+  border: none;
+  background-color: transparent;
+  > :first-child {
+    font-size: 1.5rem;
+    color: $boxes-bdColor;
+  }
+}

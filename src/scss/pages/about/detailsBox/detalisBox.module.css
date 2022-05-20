@@ -52,7 +52,7 @@
 
 .title {
   font-size: 1.5rem;
-  border: 1px solid var(--root-boxes-bdColor);
+  border: 1px solid var(--root-boxes-bgColor);
   width: 60%;
   text-align: start;
   padding: 5px 10px;

@@ -6,17 +6,16 @@
   z-index: 1044;
   height: $header-height;
   background-color: $second-color;
-  box-shadow: 0 0 0 0.2rem $primary-color;
+  border-bottom: 4px solid $primary-color;
   transition: background-color 0.3s cubic-bezier(0.22, 0.61, 0.36, 1),
-    box-shadow 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+    border-bottom 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 .scroll {
   position: fixed;
   top: 0;
   width: 100%;
   background-color: $primary-color;
-  border-bottom: 2px solid $primary-color;
-  box-shadow: 0 0 45px 0 $second-color;
+  border-bottom: 4px solid #191919;
   transition: top 0.3s ease-out;
 }
 .Headercontainer {

@@ -50,6 +50,7 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  gap: 12px;
   padding: 0.6rem 1.3rem;
   border: 0.5px solid var(--root-boxes-bgColor);
   list-style: none;
@@ -70,9 +71,16 @@
 }
 
 .icon {
-  max-width: 11%;
-  margin-top: 0.3rem;
-  margin-left: 0.75rem;
+  display: -ms-grid;
+  display: grid;
+  -webkit-margin-before: 0.5rem;
+          margin-block-start: 0.5rem;
+  place-content: center;
+  place-items: center;
+}
+
+.icon > img {
+  max-width: 65%;
 }
 
 .nameOverlay {
@@ -105,7 +113,6 @@
 
 .skillProgress {
   position: relative;
-  margin-left: 0.75rem;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;

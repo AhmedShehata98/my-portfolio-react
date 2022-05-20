@@ -38,6 +38,7 @@
       -ms-flex-align: start;
           align-items: flex-start;
   padding: 0;
+  margin: 0;
   row-gap: 25px;
   -webkit-column-gap: 8px;
           column-gap: 8px;
@@ -49,6 +50,13 @@
   overflow: hidden;
   border: 1px solid var(--root-font-color);
   background-color: var(--root-primary-color);
+}
+
+@media (max-width: 768px) {
+  .projectBox {
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+  }
 }
 
 .projectBox > img {

@@ -27,12 +27,9 @@
   z-index: 1044;
   height: 60px;
   background-color: var(--root-second-color);
-  -webkit-box-shadow: 0 0 0 0.2rem var(--root-primary-color);
-          box-shadow: 0 0 0 0.2rem var(--root-primary-color);
-  -webkit-transition: background-color 0.3s cubic-bezier(0.22, 0.61, 0.36, 1), -webkit-box-shadow 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
-  transition: background-color 0.3s cubic-bezier(0.22, 0.61, 0.36, 1), -webkit-box-shadow 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
-  transition: background-color 0.3s cubic-bezier(0.22, 0.61, 0.36, 1), box-shadow 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
-  transition: background-color 0.3s cubic-bezier(0.22, 0.61, 0.36, 1), box-shadow 0.3s cubic-bezier(0.22, 0.61, 0.36, 1), -webkit-box-shadow 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+  border-bottom: 4px solid var(--root-primary-color);
+  -webkit-transition: background-color 0.3s cubic-bezier(0.22, 0.61, 0.36, 1), border-bottom 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+  transition: background-color 0.3s cubic-bezier(0.22, 0.61, 0.36, 1), border-bottom 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
 .scroll {
@@ -40,9 +37,7 @@
   top: 0;
   width: 100%;
   background-color: var(--root-primary-color);
-  border-bottom: 2px solid var(--root-primary-color);
-  -webkit-box-shadow: 0 0 45px 0 var(--root-second-color);
-          box-shadow: 0 0 45px 0 var(--root-second-color);
+  border-bottom: 4px solid #191919;
   -webkit-transition: top 0.3s ease-out;
   transition: top 0.3s ease-out;
 }

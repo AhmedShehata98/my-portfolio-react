@@ -197,13 +197,22 @@ const siteData = {
           btn_2: "reset",
         },
       },
-      contactsBoxes: {
-        email: "ahmedshehataq98@gmail.com",
-        phonesNumbers: ["01096019665", "01559021655"],
-        linkedIN: "linkedin/ahmed-shehata-b63001225",
-        facebook: "facebook.com/MidoEsquire",
-        address: "Egypt , Alexandria - st - Elhadara Elgededa ",
-      },
+      contactsBoxes: [
+        {
+          itemLabel: "ahmedshehataq98@gmail.com",
+          iconName: "bi bi-envelope-check-fill",
+        },
+        { itemLabel: "01559021655", iconName: "bi bi-telephone-forward-fill" },
+        {
+          itemLabel: "linkedin/ahmed-shehata-b63001225",
+          iconName: "bi bi-linkedin",
+        },
+        { itemLabel: "facebook.com/MidoEsquire", iconName: "bi bi-facebook" },
+        {
+          itemLabel: "Egypt , Alexandria - st - Elhadara Elgededa ",
+          iconName: "bi bi-compass-fill",
+        },
+      ],
     },
   },
 
@@ -393,13 +402,22 @@ const siteData = {
           btn_2: "افراغ الحقول",
         },
       },
-      contactsBoxes: {
-        email: "ahmedshehataq98@gmail.com",
-        phonesNumbers: ["01096019665", "01559021655"],
-        linkedIN: "linkedin.com/ahmed-shehata-b63001225",
-        facebook: "facebook.com/MidoEsquire",
-        address: "مصر - الاسكندرية - منطة الحضرة الجديدة",
-      },
+      contactsBoxes: [
+        {
+          itemLabel: "ahmedshehataq98@gmail.com",
+          iconName: "bi bi-envelope-check-fill",
+        },
+        { itemLabel: "01559021655", iconName: "bi bi-telephone-forward-fill" },
+        {
+          itemLabel: "linkedin/ahmed-shehata-b63001225",
+          iconName: "bi bi-linkedin",
+        },
+        { itemLabel: "facebook.com/MidoEsquire", iconName: "bi bi-facebook" },
+        {
+          itemLabel: "مصر - الاسكندرية - منطة الحضرة الجديدة",
+          iconName: "bi bi-compass-fill",
+        },
+      ],
     },
   },
 };

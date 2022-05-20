@@ -16,6 +16,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  gap: 12px;
   padding: 0.6rem 1.3rem;
   border: 0.5px solid $boxes-bgColor;
   list-style: none;
@@ -35,9 +36,13 @@
 }
 
 .icon {
-  max-width: 11%;
-  margin-top: 0.3rem;
-  margin-left: 0.75rem;
+  display: grid;
+  margin-block-start: 0.5rem;
+  place-content: center;
+  place-items: center;
+  > img {
+    max-width: 65%;
+  }
 }
 .nameOverlay {
   position: absolute;
@@ -64,7 +69,7 @@
 
 .skillProgress {
   position: relative;
-  margin-left: 0.75rem;
+  // margin-left: 0.75rem;
   flex: 1;
   height: 8px;
   background-color: $progress-backround;

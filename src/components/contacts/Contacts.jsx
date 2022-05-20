@@ -22,7 +22,7 @@ function Contacts() {
     <div className={styles.contacts} id="Contacts">
       <Container>
         <SectionHeader iconName={iconName} title={title} subTitle={subTitle} />
-        <ContentWrapper>
+        <ContentWrapper borderClr={false}>
           <Row>
             <Col class_list="col-12 col-md-6">
               <Form />
