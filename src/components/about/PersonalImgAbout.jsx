@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../../scss/pages/about/personalImgAbout/personalImgAbout.module.css";
-import PersonalImgAboutSrc from "../../assets/images/personal_img-2.jpg";
+import PersonalImgAboutSrc from "../../assets/images/personal_img-2.webp";
 
 const PersonalImgAbout = () => {
   return (
