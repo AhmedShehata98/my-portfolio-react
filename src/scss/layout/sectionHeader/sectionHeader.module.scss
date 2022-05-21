@@ -27,6 +27,9 @@
     width: 100%;
     margin-bottom: 1rem;
   }
+  @include endPoint(lg) {
+    width: 30%;
+  }
 
   > :last-child {
     color: $boxes-bgColor;
@@ -62,5 +65,9 @@
   @include endPoint(sm) {
     font-size: 1rem;
     font-weight: 500;
+  }
+  @include endPoint(lg) {
+    max-width: 60%;
+    margin-bottom: 1rem;
   }
 }

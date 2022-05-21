@@ -15,6 +15,12 @@
     align-items: center;
     justify-content: flex-end;
   }
+  @include endPoint(lg) {
+    height: 40%;
+    text-align: center;
+    align-items: center;
+    justify-content: flex-end;
+  }
 }
 .heading {
   margin-bottom: 2rem;

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 // import styles
 import styles from "../../scss/pages/home/home.module.css";
@@ -6,8 +6,6 @@ import styles from "../../scss/pages/home/home.module.css";
 import Headings from "./Headings";
 import SocialMediaLinks from "./SocialMediaLinks";
 import PersonalIMG from "./PersonalIMG";
-import backgroundIMG_lg from "../../assets/images/backgrond.jpg";
-import backgroundIMG_sm from "../../assets/images/backgrond_mobile.jpg";
 
 const Home = () => {
   return (

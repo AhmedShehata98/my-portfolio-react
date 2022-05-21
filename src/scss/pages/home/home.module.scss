@@ -37,7 +37,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @include endPoint(sm) {
+  @include endPoint(lg) {
     align-items: flex-end;
     margin-bottom: 4.5rem;
   }
@@ -50,7 +50,7 @@
   height: 100%;
   width: 100%;
 
-  @include endPoint(sm) {
+  @include endPoint(lg) {
     align-items: center;
     flex-direction: column-reverse;
     justify-content: space-between;
@@ -69,7 +69,7 @@
   width: 100%;
   height: 45px;
 
-  @include endPoint(sm) {
+  @include endPoint(lg) {
     bottom: 25%;
   }
 }

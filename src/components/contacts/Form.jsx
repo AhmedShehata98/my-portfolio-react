@@ -93,32 +93,6 @@ function Form() {
     }
   }
 
-  function returnButons() {
-    return (
-      <Fragment>
-        <Col class_list="col-12 col-md-5">
-          <button className={styles["sendButton"]} type="submit">
-            {btn_1}
-          </button>
-        </Col>
-        <Col class_list="col-12 col-md-5">
-          <button
-            className={styles["resetButton"]}
-            type="reset"
-            onClick={() => {
-              resetFirstName();
-              resetLastName();
-              resetSubject();
-              resetMessage();
-            }}
-          >
-            {btn_2}
-          </button>
-        </Col>
-      </Fragment>
-    );
-  }
-
   const {
     languages: {
       contacts: {

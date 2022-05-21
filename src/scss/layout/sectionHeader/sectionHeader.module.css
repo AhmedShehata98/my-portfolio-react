@@ -72,6 +72,12 @@
   }
 }
 
+@media (max-width: 992px) {
+  .headingTitle {
+    width: 30%;
+  }
+}
+
 .headingTitle > :last-child {
   color: var(--root-boxes-bgColor);
   font-size: 1.3rem;
@@ -112,6 +118,13 @@
   .headingSubTitle {
     font-size: 1rem;
     font-weight: 500;
+  }
+}
+
+@media (max-width: 992px) {
+  .headingSubTitle {
+    max-width: 60%;
+    margin-bottom: 1rem;
   }
 }
 /*# sourceMappingURL=sectionHeader.module.css.map */

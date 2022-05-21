@@ -501,7 +501,6 @@ const siteData = {
   },
 };
 
-console.log(siteData);
 const DataContentProvider = ({ children }) => {
   let [locale, setLocale] = useState("en");
 

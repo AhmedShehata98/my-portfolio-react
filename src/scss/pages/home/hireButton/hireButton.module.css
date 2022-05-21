@@ -55,4 +55,17 @@
     width: calc(100% - 45px);
   }
 }
+
+@media (max-width: 992px) {
+  .hire-button {
+    font-size: 1.8rem !important;
+    width: calc(100% - 45px);
+    background-color: var(--root-primary-color) !important;
+    border: 2px solid var(--root-boxes-bdColor);
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    height: 60px;
+    color: var(--root-font-color) !important;
+  }
+}
 /*# sourceMappingURL=hireButton.module.css.map */

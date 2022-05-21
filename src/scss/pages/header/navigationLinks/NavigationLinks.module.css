@@ -40,7 +40,7 @@
           flex: 1;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .navigation-links {
     position: absolute;
     top: 100%;
@@ -109,7 +109,7 @@
   transition: color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.3s cubic-bezier(0.47, 0, 0.745, 0.715);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .Links {
     margin-top: 8px;
     margin-bottom: 8px;
@@ -135,7 +135,7 @@
   width: 95%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .Links:hover::after {
     background-color: var(--root-second-color);
   }

@@ -2,7 +2,6 @@ import React from "react";
 import { nanoid } from "nanoid";
 
 const ServicesList = ({ services, styles }) => {
-  console.log(services);
   return (
     <ul className={styles["servciesList-wrapper"]}>
       {services.map(({ serviceName, serviceIcon, serviceDescription }) => {

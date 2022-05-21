@@ -14,7 +14,7 @@ export const PortfolioList = () => {
     ({ projectIMG, name, discription, sourceLink, demoLink }, index) => {
       return (
         <li className={styles.projectBox} key={nanoid(6)}>
-          <img src={projectIMG} alt={`project-perview-image #${index}`} />
+          <img src={projectIMG} alt={`project-perview #${index}`} />
           <div className={styles.DescriptionWrapper}>
             <div className={styles.projectDescription}>
               <h4 className={styles.projectName}>{name}</h4>

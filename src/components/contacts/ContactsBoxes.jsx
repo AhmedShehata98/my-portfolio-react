@@ -1,11 +1,9 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { siteDataCtx } from "../../contexts/dataContentContext";
+import { nanoid } from "nanoid";
 import styles from "../../scss/pages/contacts/contactsBoxes/contactsBoxes.module.css";
 
 function ContactsBoxes() {
-  const {
-    languages: { lang },
-  } = useContext(siteDataCtx);
   const {
     languages: {
       contacts: { contactsBoxes },
@@ -14,7 +12,7 @@ function ContactsBoxes() {
 
   let contacts = contactsBoxes.map(({ itemLabel, iconName }) => {
     return (
-      <li className={styles["box-wrapper"]}>
+      <li className={styles["box-wrapper"]} key={nanoid(6)}>
         <span className={styles["icon"]}>
           <i className={iconName}></i>
         </span>

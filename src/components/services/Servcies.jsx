@@ -11,7 +11,6 @@ import styles from "../../scss/pages/services/services.module.css";
 const Servcies = () => {
   const {
     languages: {
-      lang,
       services: {
         header: { title, subTitle, iconName },
         servicesList,

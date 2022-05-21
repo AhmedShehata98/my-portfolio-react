@@ -23,4 +23,13 @@
   @include endPoint(sm) {
     width: calc(100% - 45px);
   }
+  @include endPoint(lg) {
+    font-size: 1.8rem !important;
+    width: calc(100% - 45px);
+    background-color: $primary-color !important;
+    border: 2px solid $boxes-bdColor;
+    align-self: flex-start;
+    height: 60px;
+    color: $font-color !important;
+  }
 }

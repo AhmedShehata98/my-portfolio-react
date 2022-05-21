@@ -2,7 +2,7 @@
 /* Preset body */
 /***************/
 body {
-  background-color: $second-color;
+  background-color: $second-color !important;
   transition: background-color 0.7s cubic-bezier(0.65, 0.21, 0.65, 1.24);
   animation-name: pageLoading;
   animation-duration: 1.1s;

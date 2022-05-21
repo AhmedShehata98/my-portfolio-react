@@ -9,6 +9,8 @@ import Skills from "./components/skills/Skills";
 import Contacts from "./components/contacts/Contacts";
 import Portfolio from "./components/portoflio/Portfolio";
 import Servcies from "./components/services/Servcies";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 function App() {
   return (
