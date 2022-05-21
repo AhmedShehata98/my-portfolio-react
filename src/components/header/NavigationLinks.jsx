@@ -8,17 +8,24 @@ const NavigationLinks = ({ navLinkVisibility, headerActive }) => {
 
   let {
     languages: {
-      header: {
-        navLinks: {
-          navLinkHome,
-          navLinkAbout,
-          navLinkSkills,
-          navLinkPortfolio,
-          navLinkContent,
-        },
-      },
+      header: { navLinks },
     },
   } = siteData;
+
+  const navbarLinks = Object.values(navLinks).map((link) => {
+    return (
+      <a
+        className={
+          headerActive >= 90
+            ? styles.Links + " " + styles.scroll_link
+            : styles.Links
+        }
+        href={`#${link}`}
+      >
+        {link}
+      </a>
+    );
+  });
 
   return (
     <div
@@ -28,58 +35,7 @@ const NavigationLinks = ({ navLinkVisibility, headerActive }) => {
           : styles["navigation-links"] + " " + styles["open"]
       }
     >
-      <nav className={styles["navigation-box"]}>
-        <a
-          className={
-            headerActive >= 90
-              ? styles.Links + " " + styles.scroll_link
-              : styles.Links
-          }
-          href="#Home"
-        >
-          {navLinkHome}
-        </a>
-        <a
-          className={
-            headerActive >= 90
-              ? styles.Links + " " + styles.scroll_link
-              : styles.Links
-          }
-          href="#About"
-        >
-          {navLinkAbout}
-        </a>
-        <a
-          className={
-            headerActive >= 90
-              ? styles.Links + " " + styles.scroll_link
-              : styles.Links
-          }
-          href="#Skills"
-        >
-          {navLinkSkills}
-        </a>
-        <a
-          className={
-            headerActive >= 90
-              ? styles.Links + " " + styles.scroll_link
-              : styles.Links
-          }
-          href="#Portfolio"
-        >
-          {navLinkPortfolio}
-        </a>
-        <a
-          className={
-            headerActive >= 90
-              ? styles.Links + " " + styles.scroll_link
-              : styles.Links
-          }
-          href="#Contacts"
-        >
-          {navLinkContent}
-        </a>
-      </nav>
+      <nav className={styles["navigation-box"]}>{navbarLinks}</nav>
       <LocaleButton headerActive={headerActive} />
     </div>
   );

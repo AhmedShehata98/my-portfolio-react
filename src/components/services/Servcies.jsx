@@ -19,7 +19,7 @@ const Servcies = () => {
   } = useContext(siteDataCtx);
 
   return (
-    <div className={styles["services"]}>
+    <div className={styles["services"]} id="services">
       <Container>
         <Row>
           <Col col_count="12">

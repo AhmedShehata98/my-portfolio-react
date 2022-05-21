@@ -19,6 +19,7 @@ const siteData = {
       navLinks: {
         navLinkHome: "Home",
         navLinkAbout: "About",
+        navLinkServices: "services",
         navLinkSkills: "Skills",
         navLinkPortfolio: "Portfolio",
         navLinkContent: "contacts",
@@ -262,6 +263,7 @@ const siteData = {
       navLinks: {
         navLinkHome: "الرئيسية",
         navLinkAbout: "عني",
+        navLinkServices: "خدمات",
         navLinkSkills: "مهارات",
         navLinkPortfolio: "أعمالي",
         navLinkContent: "تواصل",

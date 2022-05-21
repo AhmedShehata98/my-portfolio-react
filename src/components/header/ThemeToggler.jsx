@@ -24,6 +24,7 @@ function ThemeToggler({ themeButton, setThemeButton, headerActive }) {
     );
     document.documentElement.style.setProperty(varFontClrProp, fontHex);
     document.documentElement.style.setProperty(varOverlayProp, overlayColor);
+    document.documentElement.style.setProperty("--bs-body-bg", secondaryHex);
 
     let secondaryClr = getComputedStyle(
       document.documentElement
@@ -59,6 +60,7 @@ function ThemeToggler({ themeButton, setThemeButton, headerActive }) {
     );
     document.documentElement.style.setProperty(varFontClrProp, fontHex);
     document.documentElement.style.setProperty(varOverlayProp, overlayColor);
+    document.documentElement.style.setProperty("--bs-body-bg", secondaryHex);
 
     let secondaryClr = getComputedStyle(
       document.documentElement
@@ -97,9 +99,6 @@ function ThemeToggler({ themeButton, setThemeButton, headerActive }) {
   if (themeButton && headerActive < 90) {
     ThemeButton_Wrapper = "themeBotton-Wrapper on";
   }
-
-  // let [localstorage, length] = useLocalStorage("ahmed", "age:24");
-  // let [localstorage2, length2] = useLocalStorage("ahmed 2", "age:28");
 
   return (
     <div className="buttonBox">

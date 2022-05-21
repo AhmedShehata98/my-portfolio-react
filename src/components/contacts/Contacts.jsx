@@ -19,7 +19,7 @@ function Contacts() {
   } = useContext(siteDataCtx);
 
   return (
-    <div className={styles.contacts} id="Contacts">
+    <div className={styles.contacts} id="contacts">
       <Container>
         <SectionHeader iconName={iconName} title={title} subTitle={subTitle} />
         <ContentWrapper borderClr={false}>

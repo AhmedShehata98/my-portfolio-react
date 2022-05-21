@@ -2,12 +2,13 @@
 /* fonts */
 /**********/
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&display=swap");
 /**********/
 /* colors */
 /**********/
 :root {
   --bs-body-font-family: "Nunito", sans-serif;
+  --bs-body-bg: var(--root-second-color);
   --root-primary-color: #33a06f;
   --root-second-color: #041417;
   --root-overlay-color: #17201c;

@@ -27,14 +27,14 @@ function LocaleButton({ headerActive }) {
   }
   function switchEnglish() {
     let varfontFamilyProp = "--bs-body-font-family";
-    let fontFamilyProp = ' "Nunito", sans-serif ';
+    let fontFamilyProp = ' "Roboto Mono", monospace ';
     document.documentElement.dir = "ltr";
     document.documentElement.lang = "en";
     document.documentElement.style.setProperty(
       varfontFamilyProp,
       fontFamilyProp
     );
-    // document.body.fontFamily = ' "Nunito", sans-serif ';
+    // font-family: 'Roboto Mono', monospace;
     setLanguage("en");
   }
 
