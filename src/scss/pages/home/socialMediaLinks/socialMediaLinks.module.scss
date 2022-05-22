@@ -6,13 +6,17 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: calc(95vh - 150px);
+  height: calc(95vh - 70px);
   width: 30px;
 
   @include endPoint(sm) {
     // margin-top: 1.5rem !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
+  }
+  @media (min-width: 992px) {
+    padding-block-start: 3rem;
+    padding-block-end: 3rem;
   }
 }
 .first-line,
@@ -21,6 +25,7 @@
   background-color: $primary-color;
   width: 4px;
   height: calc(100% / 2);
+  box-shadow: 3px -7px 20px 0px $second-color;
 }
 
 .social-media-icons {

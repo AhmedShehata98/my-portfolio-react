@@ -7,7 +7,7 @@
   justify-content: center;
   align-items: center;
   width: 500px;
-  height: calc(100vh - (200px));
+  height: fit-content;
   aspect-ratio: 1 / 1;
 
   -webkit-clip-path: polygon(
@@ -33,8 +33,8 @@
       10% 25%
     );
     clip-path: polygon(49% 12%, 90% 25%, 90% 69%, 50% 86%, 10% 72%, 10% 25%);
-    width: 100%;
-    height: 70%;
+    width: 65%;
+    height: fit-content;
     aspect-ratio: 1 / 1;
     margin-right: 0.5rem;
   }
@@ -58,7 +58,7 @@
     transform: translateY(-10px);
   }
   100% {
-    transform: translateY(30px);
+    transform: translateY(20px);
   }
 }
 @keyframes bounceX {

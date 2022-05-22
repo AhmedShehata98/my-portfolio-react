@@ -11,9 +11,13 @@ const HireButton = () => {
   } = siteData;
 
   return (
-    <button className={`${styles["hire-button"]} btn`} type="button">
+    <a
+      href="#contacts"
+      className={`${styles["hire-button"]} btn`}
+      type="button"
+    >
       {hire_Button}
-    </button>
+    </a>
   );
 };
 

@@ -45,3 +45,33 @@
     margin-bottom: 1rem;
   }
 }
+.buttons-wrapper {
+  width: calc(100% - 30px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+.github-btn-wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 12px;
+  @include endPoint(lg) {
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+  @include endPoint(sm) {
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+  }
+  > :last-child {
+    @include endPoint(sm) {
+      display: none;
+    }
+  }
+}

@@ -1,11 +1,8 @@
 import React from "react";
-import useLocalStorage from "../../hooks/useLocalStorage";
 
 import "../../scss/pages/header/modeToggler/modeToggler.css";
 
-function ThemeToggler({ themeButton, setThemeButton, headerActive }) {
-  // liftn state up to parent component
-
+function ThemeToggler({ headerActive, setSuperState, superState }) {
   const light = () => {
     // var colors defaultProps
 
@@ -79,24 +76,26 @@ function ThemeToggler({ themeButton, setThemeButton, headerActive }) {
     };
   };
 
+  window.addEventListener("load", toggleTheme());
+
   function toggleTheme() {
-    if (themeButton === true) {
+    if (superState === true) {
       light();
     }
-    if (themeButton === false) {
+    if (superState === false) {
       night();
     }
   }
   function handleToggle() {
-    setThemeButton(!themeButton);
     toggleTheme();
+    setSuperState(!superState);
   }
 
   let ThemeButton_Wrapper = "themeBotton-Wrapper";
-  if (themeButton && headerActive >= 90) {
+  if (superState && headerActive >= 90) {
     ThemeButton_Wrapper = "themeBotton-Wrapper scroll_themeMode";
   }
-  if (themeButton && headerActive < 90) {
+  if (superState && headerActive < 90) {
     ThemeButton_Wrapper = "themeBotton-Wrapper on";
   }
 
@@ -111,13 +110,13 @@ function ThemeToggler({ themeButton, setThemeButton, headerActive }) {
           className="theme-Button"
           type="checkbox"
           name="theme Button"
-          checked={themeButton}
+          checked={superState}
           id="themeButton"
-          onChange={handleToggle}
+          onChange={() => handleToggle()}
         />
 
         <span className="modeIndicator">
-          {themeButton === false ? (
+          {superState === true ? (
             <i
               className="bi bi-brightness-high-fill"
               style={{ color: "#EC994B" }}

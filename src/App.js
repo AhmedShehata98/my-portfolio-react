@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "./components/header/Header";
 import DataContentProvider from "./contexts/dataContentContext";
-import ColorsModeProvider from "./contexts/NightMode";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import Home from "./components/home/Home";
 import About from "./components/about/About";
@@ -14,15 +13,13 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 function App() {
   return (
     <DataContentProvider>
-      <ColorsModeProvider>
-        <Header />
-        <Home />
-        <About />
-        <Servcies />
-        <Skills />
-        <Portfolio />
-        <Contacts />
-      </ColorsModeProvider>
+      <Header />
+      <Home />
+      <About />
+      <Servcies />
+      <Skills />
+      <Portfolio />
+      <Contacts />
     </DataContentProvider>
   );
 }

@@ -35,13 +35,20 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-top: 2.3rem;
+}
+
+@media (max-width: 768px) {
+  .home {
+    margin-top: 1.5rem;
+  }
 }
 
 .HomeContainer {
@@ -118,7 +125,8 @@
 
 @media (max-width: 992px) {
   .ScrollDown_Wrapper {
-    bottom: 25%;
+    bottom: 40%;
+    display: none;
   }
 }
 

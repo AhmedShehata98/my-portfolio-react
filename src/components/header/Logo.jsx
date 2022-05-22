@@ -6,7 +6,7 @@ import logo_2 from "../../assets/images/OURAT_2.png";
 const Logo = ({ toggle }) => {
   return (
     <div className={style.logo}>
-      <img src={toggle !== false ? logo : logo_2} alt="Logo" />
+      <img src={toggle === true ? logo_2 : logo} alt="Logo" />
     </div>
   );
 };

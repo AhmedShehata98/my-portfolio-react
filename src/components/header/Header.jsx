@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
+import useSuperState from "../../hooks/useSuperState";
+
 import styles from "../../scss/pages/header/header.module.css";
 
 // import component
@@ -9,8 +11,9 @@ import TogglerButton from "./TogglerButton";
 
 const Header = () => {
   const [navLinkVisibility, setNavLinkVisibility] = useState(false);
-  const [themeButton, setThemeButton] = useState(true);
   const [headerActive, setHeaderActive] = useState(0);
+  const [themeButton, setThemeButton] = useState(true);
+  const [superState, setSuperState] = useSuperState("themeValue", true); // true light mode -- false for night mode
 
   useEffect(() => {
     window.addEventListener("scroll", () => setHeaderActive(window.scrollY));
@@ -23,15 +26,15 @@ const Header = () => {
       }
     >
       <section className={`${styles.Headercontainer} container`}>
-        <Logo toggle={themeButton} />
+        <Logo toggle={superState} />
         <NavigationLinks
           navLinkVisibility={navLinkVisibility}
           headerActive={headerActive}
         />
         <ThemeToggler
-          themeButton={themeButton}
-          setThemeButton={setThemeButton}
           headerActive={headerActive}
+          superState={superState}
+          setSuperState={setSuperState}
         />
         <TogglerButton
           navLinkVisibility={navLinkVisibility}

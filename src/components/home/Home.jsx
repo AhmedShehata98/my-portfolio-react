@@ -8,23 +8,9 @@ import SocialMediaLinks from "./SocialMediaLinks";
 import PersonalIMG from "./PersonalIMG";
 
 const Home = () => {
-  // const varSecondaryClrProp = "--root-second-color";
-  // let secondaryClr = getComputedStyle(
-  //   document.documentElement
-  // ).getPropertyPriority(varSecondaryClrProp);
-
-  // window.addEventListener("load", () => {
-  //   document.documentElement.style.setProperty("--bs-body-bg", secondaryClr);
-  // });
-
   return (
     <main className={`${styles.home}`} id="Home">
-      {/* <div className={styles["background"]}>
-        <img
-          src={innerWidth <= 768 ? backgroundIMG_sm : backgroundIMG_lg}
-          alt="background"
-        />
-      </div> */}
+      <div className={styles["pattern-1"]}></div>
       <div className={styles["overlay"]}></div>
       <section className={`${styles.HomeContainer} container`}>
         <SocialMediaLinks />
