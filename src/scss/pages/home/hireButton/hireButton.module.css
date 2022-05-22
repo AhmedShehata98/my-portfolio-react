@@ -65,7 +65,6 @@
     border: 2px solid var(--root-boxes-bdColor);
     -ms-flex-item-align: start;
         align-self: flex-start;
-    height: 60px;
     color: var(--root-font-color) !important;
   }
 }

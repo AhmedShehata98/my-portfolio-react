@@ -10,7 +10,8 @@ function LoadingModule() {
     return () => {
       document.body.classList.remove(styles["bodyNoScroll"]);
     };
-  }, []);
+  });
+
   return (
     <div className={styles["isLoadingModule"]}>
       <div className={styles["hexagen-wrapper"]}>

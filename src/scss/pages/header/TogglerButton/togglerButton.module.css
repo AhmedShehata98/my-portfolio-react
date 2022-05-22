@@ -54,6 +54,11 @@
           justify-content: center;
   color: var(--root-primary-color);
   font-size: 2.5rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
 }
 
 @media (max-width: 992px) {

@@ -14,6 +14,9 @@
   background-color: $boxes-bgColor;
   margin-top: 2rem;
   border: 2px solid $boxes-bdColor;
+  @include endPoint(sm) {
+    flex-direction: column;
+  }
 }
 .headingTitle {
   display: flex;
@@ -23,12 +26,12 @@
   background-color: $boxes-bdColor;
   width: 20%;
 
+  @include endPoint(lg) {
+    width: 30%;
+  }
   @include endPoint(sm) {
     width: 100%;
     margin-bottom: 1rem;
-  }
-  @include endPoint(lg) {
-    width: 30%;
   }
 
   > :last-child {
@@ -62,12 +65,13 @@
   font-weight: 600;
   line-height: 1.1;
 
-  @include endPoint(sm) {
-    font-size: 1rem;
-    font-weight: 500;
-  }
   @include endPoint(lg) {
     max-width: 60%;
     margin-bottom: 1rem;
+  }
+  @include endPoint(sm) {
+    font-size: 1rem;
+    font-weight: 500;
+    max-width: 100%;
   }
 }
