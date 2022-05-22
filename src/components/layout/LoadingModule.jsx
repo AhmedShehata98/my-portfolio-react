@@ -1,13 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import styles from "../../scss/layout/loadingModule.module.css";
 import logo from "../../assets/images/OURATE.png";
 
 function LoadingModule() {
-  const [bodyNoScroll, setBodyNoScrollt] = useState(true);
-  bodyNoScroll
-    ? document.body.classList.add(styles["bodyNoScroll"])
-    : document.body.classList.remove(styles["bodyNoScroll"]);
+  document.body.classList.add(styles["bodyNoScroll"]);
+  useEffect(() => {
+    document.body.classList.add(styles["bodyNoScroll"]);
 
+    return () => {
+      document.body.classList.remove(styles["bodyNoScroll"]);
+    };
+  }, []);
   return (
     <div className={styles["isLoadingModule"]}>
       <div className={styles["hexagen-wrapper"]}>
