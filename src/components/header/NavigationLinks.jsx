@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import styles from "../../scss/pages/header/navigationLinks/NavigationLinks.module.css";
 import { siteDataCtx } from "../../contexts/dataContentContext";
 import LocaleButton from "./LocaleButton";
+import { nanoid } from "nanoid";
 
 const NavigationLinks = ({ navLinkVisibility, headerActive }) => {
   const siteData = useContext(siteDataCtx);
@@ -15,6 +16,7 @@ const NavigationLinks = ({ navLinkVisibility, headerActive }) => {
   const navbarLinks = Object.values(navLinks).map((link) => {
     return (
       <a
+        key={nanoid(6)}
         className={
           headerActive >= 90
             ? styles.Links + " " + styles.scroll_link

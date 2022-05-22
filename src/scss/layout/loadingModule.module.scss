@@ -1,11 +1,11 @@
 @import "../utilites/variables";
 @import "../utilites/mixins";
 
-.isLoadingContainer {
+.isLoadingModule {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
+  position: fixed;
   z-index: 20000;
   left: 0;
   top: 0;
@@ -16,9 +16,88 @@
     max-width: 100%;
     object-fit: cover;
   }
+}
+.hexagen-wrapper {
+  position: relative;
+  display: grid;
+  place-items: center;
+  z-index: 2;
+  width: 125px;
+  height: 125px;
+  background-color: $primary-color;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+.hexagen-layer1 {
+  position: relative;
+  display: grid;
+  place-items: center;
+  z-index: 3;
+  width: 115px;
+  height: 115px;
+  background-color: $second-color;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  aspect-ratio: 1 / 1;
 
-  body {
-    height: 100vh;
-    width: 100%;
+  > img {
+    display: inline-block;
+    max-width: 85%;
+    margin: auto;
+  }
+}
+.hexagen-layer2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 125px;
+  height: 125px;
+  background-color: $second-color;
+  outline: none;
+  animation: hexagenLoading 5s cubic-bezier(0.6, -0.28, 0.74, 0.05) both
+    infinite;
+}
+
+.bodyNoScroll {
+  position: fixed;
+  max-height: 100vh;
+  width: 100%;
+}
+
+@keyframes hexagenLoading {
+  0% {
+    clip-path: polygon(25% 0%, 75% 0%, 100% 36%, 67% 100%, 25% 100%, 0% 50%);
+
+    // top right
+  }
+  16.6% {
+    clip-path: polygon(25% 0%, 75% 0%, 100% 36%, 71% 85%, 25% 100%, 0% 50%);
+    //right bottom
+  }
+  33.2% {
+    clip-path: polygon(25% 0%, 75% 0%, 100% 36%, 71% 85%, 21% 85%, 0% 50%);
+    // bottom
+    transition: clip-path 0.5s ease-in-out;
+  }
+  49.8% {
+    clip-path: polygon(25% 0%, 75% 0%, 100% 36%, 71% 85%, 21% 85%, 0 20%);
+    // left bottom
+    transition: clip-path 0.5s ease-in-out;
+  }
+
+  66.4% {
+    clip-path: polygon(25% 0%, 75% 0%, 100% 36%, 71% 85%, 21% 85%, 23% 26%);
+    // top left
+  }
+  83.1% {
+    clip-path: polygon(57% 9%, 75% 0%, 100% 36%, 71% 85%, 21% 85%, 23% 26%);
+    // top not empty
+  }
+  100% {
+    clip-path: polygon(57% 9%, 73% 19%, 95% 48%, 71% 85%, 21% 85%, 23% 26%);
+    // fully empty
   }
 }

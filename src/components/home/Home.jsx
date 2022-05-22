@@ -1,5 +1,4 @@
 import React from "react";
-
 // import styles
 import styles from "../../scss/pages/home/home.module.css";
 // import Componentes
