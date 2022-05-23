@@ -23,7 +23,7 @@ function Contacts() {
       <Container>
         <SectionHeader iconName={iconName} title={title} subTitle={subTitle} />
         <ContentWrapper borderClr={false}>
-          <Row>
+          <Row class_list="justify-content-between">
             <Col class_list="col-12 col-md-6">
               <Form />
             </Col>

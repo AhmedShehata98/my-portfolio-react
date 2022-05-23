@@ -16,6 +16,7 @@ const Portfolio = () => {
       },
     },
   } = useContext(siteDataCtx);
+
   return (
     <div className={styles["portfolio"]} id="Portfolio">
       <Container>

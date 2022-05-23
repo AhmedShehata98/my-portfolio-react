@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import useSuperState from "../../hooks/useSuperState";
 
 import styles from "../../scss/pages/header/header.module.css";

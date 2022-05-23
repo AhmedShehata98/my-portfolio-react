@@ -48,18 +48,25 @@
 }
 
 .projectBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-radius: 0.2rem;
   position: relative;
   overflow: hidden;
-  border: 1px solid var(--root-font-color);
-  background-color: var(--root-primary-color);
-}
-
-@media (max-width: 768px) {
-  .projectBox {
-    margin-left: 0.75rem;
-    margin-right: 0.75rem;
-  }
+  list-style: none;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(75%, var(--root-primary-color)), color-stop(25%, #3333333e));
+  background: linear-gradient(0deg, var(--root-primary-color) 75%, #3333333e 25%);
 }
 
 .projectBox > img {
@@ -108,10 +115,10 @@
   background-color: var(--root-boxes-bdColor);
   -webkit-transform: translateY(150%);
           transform: translateY(150%);
-  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.08, 0.21, 0.2, 1.07);
-  transition: -webkit-transform 0.5s cubic-bezier(0.08, 0.21, 0.2, 1.07);
-  transition: transform 0.5s cubic-bezier(0.08, 0.21, 0.2, 1.07);
-  transition: transform 0.5s cubic-bezier(0.08, 0.21, 0.2, 1.07), -webkit-transform 0.5s cubic-bezier(0.08, 0.21, 0.2, 1.07);
+  -webkit-transition: -webkit-transform 0.5s ease-out;
+  transition: -webkit-transform 0.5s ease-out;
+  transition: transform 0.5s ease-out;
+  transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
 }
 
 .projectDescription {
@@ -145,21 +152,23 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   width: 100%;
   height: 50px;
   padding: 1rem 0;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(75%, var(--root-primary-color)), color-stop(25%, #3333333e));
-  background: linear-gradient(0deg, var(--root-primary-color) 75%, #3333333e 25%);
 }
 
 .links > a {
   font-size: 1.5rem;
   color: var(--root-font-color);
+}
+
+.links > a:hover {
+  color: var(--root-hover-box);
 }
 /*# sourceMappingURL=PortfolioList.module.css.map */

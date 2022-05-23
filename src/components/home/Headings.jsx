@@ -15,7 +15,7 @@ const Headings = () => {
   return (
     <div className={styles["heading-box"]}>
       <h3 className={`${styles["heading"]} `}>{headding}</h3>
-      <h5 className={`${styles["sub-heading"]} display-6`}>{sub_headding}</h5>
+      <h5 className={`${styles["sub-heading"]}`}>{sub_headding}</h5>
       <div className={`${styles["buttons-wrapper"]}`}>
         <HireButton />
 

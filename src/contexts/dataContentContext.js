@@ -508,7 +508,10 @@ const DataContentProvider = ({ children }) => {
 
   return (
     <siteDataCtx.Provider
-      value={{ languages: siteData[locale], setLanguage: setLocale }}
+      value={{
+        languages: siteData[locale],
+        setLanguage: setLocale,
+      }}
     >
       {children}
     </siteDataCtx.Provider>

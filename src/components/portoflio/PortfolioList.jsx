@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import styles from "../../scss/pages/potfolio/portfolioList/PortfolioList.module.css";
 import { siteDataCtx } from "../../contexts/dataContentContext";
 import { nanoid } from "nanoid";

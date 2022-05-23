@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 
 import Header from "./components/header/Header";
@@ -15,6 +15,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 
 function App() {
   const [pageLoaded, setPageLoaded] = useState(false);
+  let siteReadyState = useRef([]);
 
   const loadingModulePortal = ReactDOM.createPortal(
     <LoadingModule />,
@@ -23,13 +24,18 @@ function App() {
 
   useEffect(() => {
     setTimeout(() => {}, 2000);
-    if (document.readyState === "complete") {
-      setPageLoaded(true);
-    }
-    window.addEventListener("load", setPageLoaded(true));
+    window.addEventListener("DOMContentLoaded", () => {
+      if (document.readyState === "complete") {
+        setPageLoaded(true);
+      }
+    });
 
     return () => {
-      window.removeEventListener("load", setPageLoaded(true));
+      window.removeEventListener("DOMContentLoaded", () => {
+        if (document.readyState === "complete") {
+          setPageLoaded(true);
+        }
+      });
     };
   }, []);
 
@@ -37,12 +43,12 @@ function App() {
     <DataContentProvider>
       {pageLoaded === false ? loadingModulePortal : null}
       <Header />
-      <Home />
-      <About />
-      <Servcies />
-      <Skills />
-      <Portfolio />
-      <Contacts />
+      <Home siteReadyState={siteReadyState.current} />
+      <About siteReadyState={siteReadyState.current} />
+      <Servcies siteReadyState={siteReadyState.current} />
+      <Skills siteReadyState={siteReadyState.current} />
+      <Portfolio siteReadyState={siteReadyState.current} />
+      <Contacts siteReadyState={siteReadyState.current} />
     </DataContentProvider>
   );
 }

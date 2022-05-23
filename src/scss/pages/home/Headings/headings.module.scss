@@ -23,7 +23,7 @@
   }
 }
 .heading {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   font-size: calc(2rem + 1.5vw);
   font-weight: bold;
   background: linear-gradient(91deg, #7d1e6a 35%, #001d6e);
@@ -39,6 +39,10 @@
 .sub-heading {
   text-transform: capitalize;
   color: $font-color;
+  font-size: 1.5rem;
+  opacity: 0.7;
+  margin-bottom: 1.5rem;
+
   @include endPoint(sm) {
     font-weight: normal;
     font-size: 1.3rem !important;
