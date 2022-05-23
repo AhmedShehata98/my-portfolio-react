@@ -115,7 +115,7 @@
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
-  bottom: 10px;
+  bottom: 50px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
