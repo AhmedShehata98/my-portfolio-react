@@ -15,7 +15,6 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 
 function App() {
   const [pageLoaded, setPageLoaded] = useState(false);
-  let siteReadyState = useRef([]);
 
   const loadingModulePortal = ReactDOM.createPortal(
     <LoadingModule />,
@@ -23,15 +22,15 @@ function App() {
   );
 
   useEffect(() => {
-    setTimeout(() => {}, 2000);
-    window.addEventListener("DOMContentLoaded", () => {
+    setTimeout(() => {}, 5000);
+    window.addEventListener("load", function () {
       if (document.readyState === "complete") {
         setPageLoaded(true);
       }
     });
 
     return () => {
-      window.removeEventListener("DOMContentLoaded", () => {
+      window.removeEventListener("load", function () {
         if (document.readyState === "complete") {
           setPageLoaded(true);
         }
@@ -43,12 +42,12 @@ function App() {
     <DataContentProvider>
       {pageLoaded === false ? loadingModulePortal : null}
       <Header />
-      <Home siteReadyState={siteReadyState.current} />
-      <About siteReadyState={siteReadyState.current} />
-      <Servcies siteReadyState={siteReadyState.current} />
-      <Skills siteReadyState={siteReadyState.current} />
-      <Portfolio siteReadyState={siteReadyState.current} />
-      <Contacts siteReadyState={siteReadyState.current} />
+      <Home />
+      <About />
+      <Servcies />
+      <Skills />
+      <Portfolio />
+      <Contacts />
     </DataContentProvider>
   );
 }
