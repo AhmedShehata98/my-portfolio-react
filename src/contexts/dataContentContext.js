@@ -1,13 +1,14 @@
 import React, { createContext, useState } from "react";
+
 // start import icons
-import html5 from "../assets/images/skills-icons/html5.svg";
-import css3 from "../assets/images/skills-icons/css3.svg";
-import javascript from "../assets/images/skills-icons/javascript.svg";
-import bootstrap from "../assets/images/skills-icons/bootstrap.svg";
-import sass from "../assets/images/skills-icons/sass.svg";
-import typescript from "../assets/images/skills-icons/typescript.svg";
-import visualstudiocode from "../assets/images/skills-icons/visualstudiocode.svg";
-import npm from "../assets/images/skills-icons/npm.svg";
+import { TiHtml5 } from "react-icons/ti";
+import { TiCss3 } from "react-icons/ti";
+import { FaSass } from "react-icons/fa";
+import { FaBootstrap } from "react-icons/fa";
+import { SiJavascript } from "react-icons/si";
+import { SiTypescript } from "react-icons/si";
+import { SiVisualstudiocode } from "react-icons/si";
+import { FaNpm } from "react-icons/fa";
 
 export const siteDataCtx = createContext();
 siteDataCtx.displayName = "SiteLanguages";
@@ -40,7 +41,14 @@ const siteData = {
        Graduate Specialized Decoration .`,
 
       button: "skills",
-      programingLang: [html5, css3, javascript, bootstrap, sass, typescript],
+      programingLang: [
+        TiHtml5,
+        TiCss3,
+        FaSass,
+        SiJavascript,
+        FaBootstrap,
+        SiTypescript,
+      ],
     },
     services: {
       header: {
@@ -95,37 +103,37 @@ const siteData = {
           lang_1: {
             id: 0,
             itemName: "html 5 ",
-            iconName: html5,
+            Icon: TiHtml5,
             persent: "80%",
           },
           lang_2: {
             id: 1,
             itemName: "css & css3",
-            iconName: css3,
+            Icon: TiCss3,
             persent: "75%",
           },
           lang_3: {
             id: 2,
             itemName: "sass",
-            iconName: sass,
+            Icon: FaSass,
             persent: "60%",
           },
           lang_4: {
             id: 3,
             itemName: "bootstrap",
-            iconName: bootstrap,
+            Icon: FaBootstrap,
             persent: "70%",
           },
           lang_5: {
             id: 4,
             itemName: "javaScript",
-            iconName: javascript,
+            Icon: SiJavascript,
             persent: "75%",
           },
           lang_6: {
             id: 5,
             itemName: "TypeScript",
-            iconName: typescript,
+            Icon: SiTypescript,
             persent: "50%",
           },
         },
@@ -134,13 +142,13 @@ const siteData = {
           tool_1: {
             id: 0,
             itemName: "VS Code",
-            iconName: visualstudiocode,
+            Icon: SiVisualstudiocode,
             persent: "70%",
           },
           tool_2: {
             id: 1,
             itemName: "NPM",
-            iconName: npm,
+            Icon: FaNpm,
             persent: "25%",
           },
         },
@@ -285,7 +293,14 @@ const siteData = {
        `,
 
       button: "مهاراتي",
-      programingLang: [html5, css3, javascript, bootstrap, sass, typescript],
+      programingLang: [
+        TiHtml5,
+        TiCss3,
+        FaSass,
+        SiJavascript,
+        FaBootstrap,
+        SiTypescript,
+      ],
     },
     services: {
       header: {
@@ -338,37 +353,37 @@ const siteData = {
           lang_1: {
             id: 0,
             itemName: "html 5 ",
-            iconName: html5,
+            Icon: TiHtml5,
             persent: "80%",
           },
           lang_2: {
             id: 1,
             itemName: "css & css3",
-            iconName: css3,
+            Icon: TiCss3,
             persent: "75%",
           },
           lang_3: {
             id: 2,
             itemName: "sass",
-            iconName: sass,
+            Icon: FaSass,
             persent: "60%",
           },
           lang_4: {
             id: 3,
             itemName: "bootstrap",
-            iconName: bootstrap,
+            Icon: FaBootstrap,
             persent: "70%",
           },
           lang_5: {
             id: 4,
             itemName: "javaScript",
-            iconName: javascript,
+            Icon: SiJavascript,
             persent: "75%",
           },
           lang_6: {
             id: 5,
             itemName: "TypeScript",
-            iconName: typescript,
+            Icon: SiTypescript,
             persent: "50%",
           },
         },
@@ -377,13 +392,13 @@ const siteData = {
           tool_1: {
             id: 0,
             itemName: "VS Code",
-            iconName: visualstudiocode,
+            Icon: SiVisualstudiocode,
             persent: "70%",
           },
           tool_2: {
             id: 1,
             itemName: "NPM",
-            iconName: npm,
+            Icon: FaNpm,
             persent: "25%",
           },
         },

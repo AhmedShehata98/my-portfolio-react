@@ -17,7 +17,6 @@ const TogglerButton = ({
       if (togglerButtonRef.current !== e.target) {
         setNavLinkVisibility(false);
       }
-      console.log(e.target);
     });
     return () => {
       document.removeEventListener("click", (e) => {

@@ -15,12 +15,11 @@ function DetailsBox() {
       <h3 className={styles["title"]}>{section_heading}</h3>
       <h6 className={styles["subtitle"]}>{details}</h6>
       <ul className={styles["programingLanges"]}>
-        {programingLang.map((icon, i) => {
+        {programingLang.map((Icon, i) => {
           return (
             <li key={nanoid(6)} style={styles["programingLang"]}>
-              <span>
-                <img src={icon} alt={`icon #${i}`} />
-              </span>
+              <span>{/* <img src={icon} alt={`icon #${i}`} /> */}</span>
+              <Icon />
             </li>
           );
         })}

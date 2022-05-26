@@ -8,13 +8,15 @@ function SkillsBoxsInteration({ iterationItem }) {
     languages: { lang },
   } = useContext(siteDataCtx);
 
+  // console.log(<iterationItem.tool_1.Icon />);
   const langesListLoop = Object.entries(iterationItem).map(
-    ({ 1: { iconName, id, itemName, persent } }) => {
+    ({ 1: { Icon, id, itemName, persent } }) => {
       return (
         <li className={styles["LanguageBox"]} key={nanoid(6)}>
           <p className={styles["count"]}>{"0" + (id + 1)}</p>
           <div className={styles["icon"]}>
-            <img src={iconName} alt={"icon #" + id} />
+            {/* <img src={iconName} alt={"icon #" + id} /> */}
+            <Icon />
           </div>
           <div
             style={

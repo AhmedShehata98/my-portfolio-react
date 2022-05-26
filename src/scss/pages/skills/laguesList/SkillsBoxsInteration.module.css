@@ -76,14 +76,13 @@
 .icon {
   display: -ms-grid;
   display: grid;
-  -webkit-margin-before: 0.5rem;
-          margin-block-start: 0.5rem;
   place-content: center;
   place-items: center;
 }
 
-.icon > img {
-  max-width: 65%;
+.icon > :first-child {
+  font-size: 1.5rem;
+  color: var(--root-projects-backround);
 }
 
 .nameOverlay {

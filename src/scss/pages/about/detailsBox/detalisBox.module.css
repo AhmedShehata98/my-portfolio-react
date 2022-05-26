@@ -131,19 +131,17 @@
           align-items: center;
   gap: 8px;
   padding: 0;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .programingLanges > li {
+  font-size: 2.5rem;
+  color: var(--root-projects-backround);
   list-style: none;
   opacity: 0.7;
-  -webkit-filter: contrast(50%);
-          filter: contrast(50%);
 }
 
 .programingLanges > li:hover {
   opacity: 1;
-  -webkit-filter: contrast(100%);
-          filter: contrast(100%);
 }
 /*# sourceMappingURL=detalisBox.module.css.map */

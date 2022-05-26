@@ -37,12 +37,17 @@
 
 .icon {
   display: grid;
-  margin-block-start: 0.5rem;
+  // margin-block-start: 0.5rem;
   place-content: center;
   place-items: center;
-  > img {
-    max-width: 65%;
+
+  > :first-child {
+    font-size: 1.5rem;
+    color: $projects-backround;
   }
+  // > img {
+  //   // max-width: 65%;
+  // }
 }
 .nameOverlay {
   position: absolute;

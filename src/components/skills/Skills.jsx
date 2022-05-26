@@ -5,14 +5,21 @@ import SectionHeader from "../layout/SectionHeader";
 import Container from "../layout/Container";
 import Row from "../layout/Row";
 import Col from "../layout/Col";
-import ContentBox from "./ContentBox";
+import ContentWrapper from "../layout/ContentWrapper";
+import SkillsBoxsInteration from "./SkillsBoxsInteration";
+import Topic from "./Topic";
 
 const Skills = () => {
   let {
     languages: {
       skills: {
         headdingBox: { section_title, sub_title, iconName },
-        main_content: { titleTwo, titleThree },
+        main_content: {
+          titleTwo,
+          titleThree,
+          framework_and_Langlist,
+          toolsList,
+        },
       },
     },
   } = useContext(siteDataCtx);
@@ -31,7 +38,12 @@ const Skills = () => {
         </Row>
         <Row>
           <Col col_count="12">
-            <ContentBox headingTitle1={titleTwo} headingTitle2={titleThree} />
+            <ContentWrapper borderClr={false}>
+              <Topic title={titleTwo} />
+              <SkillsBoxsInteration iterationItem={framework_and_Langlist} />
+              <Topic title={titleThree} />
+              <SkillsBoxsInteration iterationItem={toolsList} />
+            </ContentWrapper>
           </Col>
         </Row>
       </Container>
