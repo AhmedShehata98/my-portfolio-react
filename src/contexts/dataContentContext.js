@@ -348,7 +348,7 @@ const siteData = {
           "فيما يلي لمحة موجزة عن المهارات التي أجيدها ومقدار الإتقان في كل مهارة",
       },
       main_content: {
-        titleTwo: " framework and languages",
+        titleTwo: " لفات البرمجة و اطر العمل",
         framework_and_Langlist: {
           lang_1: {
             id: 0,
@@ -387,7 +387,7 @@ const siteData = {
             persent: "50%",
           },
         },
-        titleThree: " tools",
+        titleThree: " ادوات اجيدها",
         toolsList: {
           tool_1: {
             id: 0,
