@@ -1,0 +1,56 @@
+.load_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: 100%;
+  margin-inline: auto;
+  background: linear-gradient(1deg, #585858, #858585);
+}
+.avatar-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 220px;
+  height: 220px;
+  aspect-ratio: 1 / 1;
+}
+.avatar-head {
+  background-color: #111;
+  clip-path: circle(30% at 50% 50%);
+  width: 100%;
+  height: 100%;
+  animation: load_placeholder_animation 1s alternate infinite linear;
+}
+.avatar-body {
+  width: 100%;
+  height: 100%;
+  background-color: #111;
+  clip-path: polygon(
+    49% 12%,
+    78% 20%,
+    100% 52%,
+    100% 93%,
+    0 93%,
+    0 52%,
+    23% 21%
+  );
+  animation: load_placeholder_animation 1s alternate infinite linear;
+}
+
+@keyframes load_placeholder_animation {
+  0% {
+    opacity: 0.5;
+    transition: opacity 0.5s ease-out;
+  }
+
+  50% {
+    opacity: 0.9;
+    transition: opacity 0.5s ease-out;
+  }
+  100% {
+    opacity: 0.5;
+    transition: opacity 0.5s ease-out;
+  }
+}

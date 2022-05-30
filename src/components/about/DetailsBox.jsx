@@ -18,7 +18,6 @@ function DetailsBox() {
         {programingLang.map((Icon, i) => {
           return (
             <li key={nanoid(6)} style={styles["programingLang"]}>
-              <span>{/* <img src={icon} alt={`icon #${i}`} /> */}</span>
               <Icon />
             </li>
           );

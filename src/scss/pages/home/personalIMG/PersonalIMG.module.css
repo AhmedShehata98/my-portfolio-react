@@ -69,6 +69,7 @@
 
 .main-img > img {
   max-width: 100%;
+  max-height: 100%;
   height: inherit;
   -o-object-fit: cover;
      object-fit: cover;
@@ -76,6 +77,26 @@
      object-position: center;
   -webkit-animation: 4s cubic-bezier(0.445, 0.05, 0.55, 0.95) alternate infinite bounceX;
           animation: 4s cubic-bezier(0.445, 0.05, 0.55, 0.95) alternate infinite bounceX;
+}
+
+.placeholder-effect {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--root-second-color);
+  opacity: 0.3;
+  -webkit-transition: opacity 0.7s linear;
+  transition: opacity 0.7s linear;
+  -webkit-animation: placeholder 1.2s linear alternate infinite;
+          animation: placeholder 1.2s linear alternate infinite;
 }
 
 @-webkit-keyframes bounceY {
@@ -119,6 +140,30 @@
   100% {
     -webkit-transform: translateY(-20px) translateX(20px);
             transform: translateY(-20px) translateX(20px);
+  }
+}
+
+@-webkit-keyframes placeholder {
+  0% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
+@keyframes placeholder {
+  0% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
   }
 }
 /*# sourceMappingURL=PersonalIMG.module.css.map */

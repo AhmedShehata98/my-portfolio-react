@@ -22,7 +22,6 @@ function App() {
   );
 
   useEffect(() => {
-    setTimeout(() => {}, 5000);
     window.addEventListener("load", function () {
       if (document.readyState === "complete") {
         setPageLoaded(true);

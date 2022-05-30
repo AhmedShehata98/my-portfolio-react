@@ -1,0 +1,50 @@
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 90%;
+  height: 100%;
+  margin-inline: auto;
+  background: linear-gradient(1deg, #585858, #858585);
+}
+
+.circuit {
+  -webkit-clip-path: circle(35.4% at 50% 50%);
+          clip-path: circle(35.4% at 50% 50%);
+  background-color: #111;
+  width: 150px;
+  height: 150px;
+}
+
+.rectangle-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.rectangle {
+  background-color: #111;
+  width: 200px;
+  height: 200px;
+  -webkit-clip-path: polygon(50% 29%, 0% 100%, 100% 100%);
+          clip-path: polygon(50% 29%, 0% 100%, 100% 100%);
+}
+/*# sourceMappingURL=photosLoad.module.css.map */

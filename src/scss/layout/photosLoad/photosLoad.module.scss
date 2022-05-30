@@ -1,0 +1,30 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  width: 90%;
+  height: 100%;
+  margin-inline: auto;
+  background: linear-gradient(1deg, #585858, #858585);
+}
+.circuit {
+  clip-path: circle(35.4% at 50% 50%);
+  background-color: #111;
+  width: 150px;
+  height: 150px;
+}
+.rectangle-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.rectangle {
+  background-color: #111;
+  width: 200px;
+  height: 200px;
+  clip-path: polygon(50% 29%, 0% 100%, 100% 100%);
+}
