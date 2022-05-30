@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmy_portoflio=self.webpackChunkmy_portoflio||[]).push([[318],{576:function(e,a,n){n.r(a),n.d(a,{default:function(){return i}});n(791);var o="personalImgAbout_personalImg-box__SiCf-",r=n.p+"static/media/personal_img-2.8170f06fa57caf8d3f10.webp",s=n(184),i=function(){return(0,s.jsx)("div",{className:o,children:(0,s.jsx)("img",{src:r,alt:"my-personal-img"})})}}}]);
+//# sourceMappingURL=318.15465a6f.chunk.js.map

@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmy_portoflio=self.webpackChunkmy_portoflio||[]).push([[118],{475:function(e,r,a){a.r(r),a.d(r,{default:function(){return l}});a(791);var i="PersonalIMG_img-wrapper__KjUea",s="PersonalIMG_main-img__AtrG7",n=a.p+"static/media/perosnal_img_1.cd1086962b74d94c8ce0.webp",c=a(184),l=function(){return(0,c.jsx)("div",{className:i,children:(0,c.jsx)("div",{className:s,children:(0,c.jsx)("img",{src:n,alt:"my-personal-img"})})})}}}]);
+//# sourceMappingURL=118.cda17bee.chunk.js.map
